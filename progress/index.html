@@ -31,21 +31,21 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
-      <link rel="shortcut icon" href="assets/images/favicon.png">
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
     
     
       
-        <title>eln2.org</title>
+        <title>Eln2 Progress - eln2.org</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/application.1b62728e.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.1b62728e.css">
       
       
     
     
-      <script src="assets/javascripts/modernizr.268332fc.js"></script>
+      <script src="../assets/javascripts/modernizr.268332fc.js"></script>
     
     
       
@@ -54,7 +54,7 @@
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
-    <link rel="stylesheet" href="assets/fonts/material-icons.css">
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
     
     
     
@@ -75,7 +75,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#welcome-to-eln2org" tabindex="1" class="md-skip">
+      <a href="#progress-on-eln2" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -84,7 +84,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="." title="eln2.org" class="md-header-nav__button md-logo">
+        <a href=".." title="eln2.org" class="md-header-nav__button md-logo">
           
             <i class="md-icon"></i>
           
@@ -101,7 +101,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Home
+                Eln2 Progress
               
             </span>
           
@@ -154,7 +154,7 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="." title="eln2.org" class="md-nav__button md-logo">
+    <a href=".." title="eln2.org" class="md-nav__button md-logo">
       
         <i class="md-icon"></i>
       
@@ -163,6 +163,18 @@
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
     
       
       
@@ -178,22 +190,10 @@
       
     
     
-    <a href="." title="Home" class="md-nav__link md-nav__link--active">
-      Home
-    </a>
-    
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="progress/" title="Eln2 Progress" class="md-nav__link">
+    <a href="./" title="Eln2 Progress" class="md-nav__link md-nav__link--active">
       Eln2 Progress
     </a>
+    
   </li>
 
     
@@ -249,11 +249,70 @@
               
                 
                 
-                <h1 id="welcome-to-eln2org">Welcome to eln2.org</h1>
-<p>Electrical Age 2.0, aka Eln2, is a new version of Electrical Age which is to be written for 1.12.</p>
-<p>There are some major differences in the way that Eln2 will be set up, namely, the voltage tier system will be going away, and there will be much more flexibility in the operation of the grid networks.</p>
-<p>Plans are for the mod to be at least to a playable Alpha state by Summer of 2020, with the work perhaps nearing completion by the end of 2020. These are rough guesses and are honestly pretty optimistic at best.</p>
-<p>For more information about development plans, please visit the (eln2 repository)[https://github.com/jrddunbr/electrical-age-1.12].</p>
+                <h1 id="progress-on-eln2">Progress on Eln2</h1>
+<p>General progress information about Eln2 development can be found here.</p>
+<h1 id="week-2-jan-5-jan-11">Week 2 (Jan 5 - Jan 11)</h1>
+<ul>
+<li><code>jrddunbr</code> <a href="https://travis-ci.com/jrddunbr/electrical-age-1.12">set up a Travis CI page</a> to have a build test on our commits and PR's. Plans are to hopefully have a CD pipeline at some point.</li>
+<li><code>cam72cam</code> got back to us about UMC, and we began working to determine how to make UMC generic enough that two completely different mods can use it.</li>
+<li>Quoting directly from <code>cam72cam</code> on the progress of UMC for newer versions:<ul>
+<li>1.14.4 still needs support for injecting or generating recipes. I need to work on that at some point or have you two [<code>jrddunbr</code> and <code>Grissess</code>] help</li>
+<li>I have no idea how any of the rendering will be able to be ported to 1.15.x</li>
+</ul>
+</li>
+<li><code>jrddunbr</code> set up the eln2.org website on GitHub Pages, after working with the DNS provider to determine why DNS was not propagating properly to some major resolvers.</li>
+</ul>
+<h1 id="week-1-jan-1-jan-4">Week 1 (Jan 1 - Jan 4)</h1>
+<p>Beginning of the revived Eln2 efforts. Developers are <code>jrddunbr</code> and <code>Grissess</code></p>
+<ul>
+<li>
+<p>On Jan 1, 2020, <a href="https://eln2.org"> eln2.org</a> was purchased. This allowed development using the <code>org.eln2.*</code> Java namespace to proceed without suddenly having the domain bought from under our feet.</p>
+</li>
+<li>
+<p><code>jrddunbr</code> builds a new clean repo for eln2 dev, with just the old <code>mods.eln.sim</code> directory copied on top of a 1.12.2 Forge environment (refactored to <code>org.eln2.sim</code>) and all Minecraft related methods  (eg, NBT) deleted.</p>
+</li>
+<li>
+<p>Eln2 developers guide was created by <code>jrddunbr</code></p>
+</li>
+<li>
+<p><code>cam72cam</code> was contacted about <a href="https://github.com/TeamOpenIndustry/UniversalModCore">Universal Mod Core</a></p>
+</li>
+<li>
+<p>UMC was selected because:</p>
+<ul>
+<li>It supports MC 1.12</li>
+<li>It is actively developed and maintained</li>
+<li>It claims that it will support MC 1.14 and MC 1.15 in the near future, and has some decent work to show for it.</li>
+<li><code>Grissess</code> and <code>jrddunbr</code> know the developer personally.</li>
+</ul>
+</li>
+<li>
+<p><code>Grissess</code> worked for three days on figuring out why we were having Gradle issues with importing UMC, but was unable to determine a reliable solution. Builds often failed as below:</p>
+</li>
+</ul>
+<pre><code>FAILURE: Build failed with an exception.
+
+* What went wrong:
+
+Could not determine the dependencies of task ':UniversalModCore:compileJava'.
+&gt; Could not resolve all task dependencies for configuration ':UniversalModCore:forgeGradleMc'.
+   &gt; Could not find net.minecraftforge:forgeBin:1.12.2-14.23.4.2705.
+     Searched in the following locations:
+       - https://minecraft.curseforge.com/api/maven/net/minecraftforge/forgeBin/1.12.2-14.23.4.2705/forgeBin-1.12.2-14.23.4.2705.pom
+       - https://minecraft.curseforge.com/api/maven/net/minecraftforge/forgeBin/1.12.2-14.23.4.2705/forgeBin-1.12.2-14.23.4.2705.jar
+       - https://files.minecraftforge.net/maven/net/minecraftforge/forgeBin/1.12.2-14.23.4.2705/forgeBin-1.12.2-14.23.4.2705.pom
+       - https://files.minecraftforge.net/maven/net/minecraftforge/forgeBin/1.12.2-14.23.4.2705/forgeBin-1.12.2-14.23.4.2705.jar
+       - https://repo.maven.apache.org/maven2/net/minecraftforge/forgeBin/1.12.2-14.23.4.2705/forgeBin-1.12.2-14.23.4.2705.pom
+       - https://repo.maven.apache.org/maven2/net/minecraftforge/forgeBin/1.12.2-14.23.4.2705/forgeBin-1.12.2-14.23.4.2705.jar
+       - https://libraries.minecraft.net/net/minecraftforge/forgeBin/1.12.2-14.23.4.2705/forgeBin-1.12.2-14.23.4.2705.pom
+       - https://libraries.minecraft.net/net/minecraftforge/forgeBin/1.12.2-14.23.4.2705/forgeBin-1.12.2-14.23.4.2705.jar
+       - file:/home/travis/.gradle/caches/minecraft/deobfedDeps/net/minecraftforge/forgeBin/1.12.2-14.23.4.2705/forgeBin-1.12.2-14.23.4.2705.pom
+       - file:/home/travis/.gradle/caches/minecraft/deobfedDeps/net/minecraftforge/forgeBin/1.12.2-14.23.4.2705/forgeBin-1.12.2-14.23.4.2705.jar
+       - file:/home/travis/.gradle/caches/minecraft/net/minecraftforge/forge/1.12.2-14.23.4.2705/snapshot/20171003/forgeBin-1.12.2-14.23.4.2705.jar
+       - file:/home/travis/.gradle/caches/minecraft/net/minecraftforge/forge/1.12.2-14.23.4.2705/snapshot/20171003/forgeBin.jar
+     Required by:
+         project :UniversalModCore
+</code></pre>
                 
                   
                 
@@ -275,20 +334,20 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-        
-          <a href="progress/" title="Eln2 Progress" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href=".." title="Home" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
-                  Next
+                  Previous
                 </span>
-                Eln2 Progress
+                Home
               </span>
             </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
-            </div>
           </a>
+        
         
       </nav>
     </div>
@@ -310,9 +369,9 @@
       
     </div>
     
-      <script src="assets/javascripts/application.808e90bb.js"></script>
+      <script src="../assets/javascripts/application.808e90bb.js"></script>
       
-      <script>app.initialize({version:"1.0.4",url:{base:"."}})</script>
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       
     
   </body>
