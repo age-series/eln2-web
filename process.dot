@@ -1,0 +1,12 @@
+digraph {
+  stampMatrix [label="Stamp Matrix"]
+  stampRight [label="Stamp Right Hand Side"]
+  factorA [label="Factor A"]
+  computeResults [label="Compute Results"]
+  results [label="Results"]
+
+  stampMatrix -> factorA
+  stampRight -> computeResults
+  factorA -> computeResults
+  computeResults -> results
+}

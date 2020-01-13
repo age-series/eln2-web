@@ -251,6 +251,11 @@
                 
                 <h1 id="progress-on-eln2">Progress on Eln2</h1>
 <p>General progress information about Eln2 development can be found here.</p>
+<h1 id="week-3-jan-12-jan-18">Week 3 (Jan 12 - Jan 18)</h1>
+<ul>
+<li><code>Grissess</code> works a lot on the MNA solver after <code>jrddunbr</code> tries to do some work but encounters some difficulty with configuring the datatypes efficiently. He also uses a similar methodology to the Falstad solver by having "stamps" that modify the matrix from the components. It's worth noting that the old MNA also had the concept of a stamp, and also had some matricies, but the names were a bit.. odd, and difficult to follow.</li>
+<li><code>jrddunbr</code> writes a Falstad importer, which can ingest (basic) Falstad circuits and load them into the MNA for processing.</li>
+</ul>
 <h1 id="week-2-jan-5-jan-11">Week 2 (Jan 5 - Jan 11)</h1>
 <ul>
 <li><code>jrddunbr</code> <a href="https://travis-ci.com/jrddunbr/electrical-age-1.12">set up a Travis CI page</a> to have a build test on our commits and PR's. Plans are to hopefully have a CD pipeline at some point.</li>
@@ -261,6 +266,9 @@
 </ul>
 </li>
 <li><code>jrddunbr</code> set up the eln2.org website on GitHub Pages, after working with the DNS provider to determine why DNS was not propagating properly to some major resolvers.</li>
+<li><code>jrddunbr</code> works on Kotlinizing the <code>sim</code> code</li>
+<li><code>Grissess</code> works on figuring out the Gradle import code, turns out it's going to be more difficult than we thought.</li>
+<li><code>jrddunbr</code> and <code>Grissess</code> work on determining how to use alternate MNA matrix math providers and make efficient wrappers around different math libraries for benchmarking.</li>
 </ul>
 <h1 id="week-1-jan-1-jan-4">Week 1 (Jan 1 - Jan 4)</h1>
 <p>Beginning of the revived Eln2 efforts. Developers are <code>jrddunbr</code> and <code>Grissess</code></p>
