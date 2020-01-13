@@ -2,6 +2,11 @@
 
 General progress information about Eln2 development can be found here.
 
+# Week 3 (Jan 12 - Jan 18)
+
+* `Grissess` works a lot on the MNA solver after `jrddunbr` tries to do some work but encounters some difficulty with configuring the datatypes efficiently. He also uses a similar methodology to the Falstad solver by having "stamps" that modify the matrix from the components. It's worth noting that the old MNA also had the concept of a stamp, and also had some matricies, but the names were a bit.. odd, and difficult to follow.
+* `jrddunbr` writes a Falstad importer, which can ingest (basic) Falstad circuits and load them into the MNA for processing.
+
 # Week 2 (Jan 5 - Jan 11)
 
 * `jrddunbr` [set up a Travis CI page](https://travis-ci.com/jrddunbr/electrical-age-1.12) to have a build test on our commits and PR's. Plans are to hopefully have a CD pipeline at some point.
@@ -10,6 +15,9 @@ General progress information about Eln2 development can be found here.
     * 1.14.4 still needs support for injecting or generating recipes. I need to work on that at some point or have you two [`jrddunbr` and `Grissess`] help
     * I have no idea how any of the rendering will be able to be ported to 1.15.x
 * `jrddunbr` set up the eln2.org website on GitHub Pages, after working with the DNS provider to determine why DNS was not propagating properly to some major resolvers.
+* `jrddunbr` works on Kotlinizing the `sim` code
+* `Grissess` works on figuring out the Gradle import code, turns out it's going to be more difficult than we thought.
+* `jrddunbr` and `Grissess` work on determining how to use alternate MNA matrix math providers and make efficient wrappers around different math libraries for benchmarking.
 
 # Week 1 (Jan 1 - Jan 4)
 
