@@ -2,13 +2,13 @@
 
 Some tidbits about development.
 
-### Licensing
+## Licensing
 
 Right now `Grissess` and `jrddunbr` have basically written the mod from scratch. The current suggestion is to be alright with anything from MIT license up to the old Eln license, but likely we will LGPLv2+ unless we see reason to license it otherwise.
 
 Models and artwork need to be under some creative commons license that allows modification and distribution.
 
-### Language(s)
+## Language(s)
 
 Eln2 is to be written in entirely **Kotlin**, except for where it is not possible.
 
@@ -24,7 +24,7 @@ fruits2.forEach{println(it)}
 
 will possibly make a lot more sense after reading that book.
 
-### Project Structure
+## Project Structure
 
 There are multiple repositories:
   * [electrical-age-1.12](https://github.com/jrddunbr/electrical-age-1.12): The actual Minecraft part of Electrical Age 2, written for MC 1.12
@@ -57,7 +57,7 @@ At some point, I want to move these repositories to `https://github.com/eln2`, n
 
 The different versions of the eln2 Minecraft integrations (say 1.12, 1.14, 1.15, etc) would be branches by those names on that repository, which matches the way that UMC is structured.
 
-### Log collection server
+## Log collection server
 
 For Eln2 pre-alpha development, we will have a crash log handler. What will happen is if the game crashes, we will automatically take the log, and send it out to the development team to a server that can recieve these logs and then we can process them.
 
@@ -67,7 +67,7 @@ This will aid in development, and will likely be removed at the alpha stage unle
 
 Just a FYI, these will all be copied sooner or later to GitHub issues, so that it's easier to track progress.
 
-### Phase 1: UniversalModLib
+## Phase 1: UniversalModLib
 
 - [ ] configure UniversalModLib
     - [ ] fix UniiversalModLib
@@ -76,13 +76,13 @@ Just a FYI, these will all be copied sooner or later to GitHub issues, so that i
 - [ ] crash logger
 - [ ] rebuild MNA from scratch (apparently)
 
-#### Verification:
+### Verification:
 
 - [ ] running `./gradlew build` in the main workspace will prepare libraries and compile our mod to a functional jar
 - [ ] works in TravisCI
 - [ ] config option works
 
-### Phase 2: SingleNode
+## Phase 2: SingleNode
 
 I say models and textures, but these are basic as almost all of these items will be removed/edited later.
 
@@ -126,7 +126,7 @@ I say models and textures, but these are basic as almost all of these items will
 
 NOTE: Models are not a priority at this stage as most of the Single* items will be removed later.
 
-#### Validation
+### Validation
 
 - [ ] Verify Electrical Sim works and that reasonable currents are being moved. Get Matrix Size to the user
 - [ ] Verify Thermal Sim works and that heat transfers through items properly
@@ -135,12 +135,12 @@ NOTE: Models are not a priority at this stage as most of the Single* items will 
 - [ ] Verify that Inductors work as they should IRL
 - [ ] Verify that Batteries work as they should IRL
 
-### Phase 3: MultiNode
+## Phase 3: MultiNode
 
 - [ ] autominer
 - [ ] solar panels
 
-### Phase 4: SixNode
+## Phase 4: SixNode
 
 - [ ] "New" SixNode
     - [ ] cables
@@ -154,12 +154,12 @@ NOTE: Models are not a priority at this stage as most of the Single* items will 
 - [ ] API v1.0
 - [ ] Some reasonable textures
 
-### Phase 5: Alpha Release and debugging
+## Phase 5: Alpha Release and debugging
 
 - [ ] remove developer disclaimer config
 - [ ] Initial rounds of bugfixing
 
-### Phase 6: Machines and equipment
+## Phase 6: Machines and equipment
 
 In no particular order:
 
