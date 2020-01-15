@@ -241,10 +241,9 @@
     Phases
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#phase-1-universalmodlib" class="md-nav__link">
     Phase 1: UniversalModLib
   </a>
@@ -263,8 +262,8 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#phase-2-singlenode" class="md-nav__link">
     Phase 2: SingleNode
   </a>
@@ -283,37 +282,32 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#phase-3-multinode" class="md-nav__link">
     Phase 3: MultiNode
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#phase-4-sixnode" class="md-nav__link">
     Phase 4: SixNode
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#phase-5-alpha-release-and-debugging" class="md-nav__link">
     Phase 5: Alpha Release and debugging
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#phase-6-machines-and-equipment" class="md-nav__link">
     Phase 6: Machines and equipment
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -417,10 +411,9 @@
     Phases
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#phase-1-universalmodlib" class="md-nav__link">
     Phase 1: UniversalModLib
   </a>
@@ -439,8 +432,8 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#phase-2-singlenode" class="md-nav__link">
     Phase 2: SingleNode
   </a>
@@ -459,37 +452,32 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#phase-3-multinode" class="md-nav__link">
     Phase 3: MultiNode
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#phase-4-sixnode" class="md-nav__link">
     Phase 4: SixNode
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#phase-5-alpha-release-and-debugging" class="md-nav__link">
     Phase 5: Alpha Release and debugging
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#phase-6-machines-and-equipment" class="md-nav__link">
     Phase 6: Machines and equipment
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -512,10 +500,10 @@
                 
                 <h1 id="eln-2-development">Eln 2 development</h1>
 <p>Some tidbits about development.</p>
-<h3 id="licensing">Licensing</h3>
+<h2 id="licensing">Licensing</h2>
 <p>Right now <code>Grissess</code> and <code>jrddunbr</code> have basically written the mod from scratch. The current suggestion is to be alright with anything from MIT license up to the old Eln license, but likely we will LGPLv2+ unless we see reason to license it otherwise.</p>
 <p>Models and artwork need to be under some creative commons license that allows modification and distribution.</p>
-<h3 id="languages">Language(s)</h3>
+<h2 id="languages">Language(s)</h2>
 <p>Eln2 is to be written in entirely <strong>Kotlin</strong>, except for where it is not possible.</p>
 <p>Tutorials on Kotlin can be found online if you are familiar with Java. It is not too much different, but if you don't know what a functional programming language is, I'd suggest <a href="http://learnyouahaskell.com/learnyouahaskell.pdf">reading at least part of this book</a> (<a href="https://www.amazon.com/Learn-You-Haskell-Great-Good-dp-1593272839/dp/1593272839/">amazon</a>) before starting development.</p>
 <p>Things like this:</p>
@@ -525,7 +513,7 @@ fruits2.forEach{println(it)}
 </code></pre>
 
 <p>will possibly make a lot more sense after reading that book.</p>
-<h3 id="project-structure">Project Structure</h3>
+<h2 id="project-structure">Project Structure</h2>
 <p>There are multiple repositories:
   * <a href="https://github.com/jrddunbr/electrical-age-1.12">electrical-age-1.12</a>: The actual Minecraft part of Electrical Age 2, written for MC 1.12
   * <a href="https://github.com/jrddunbr/eln2-core">eln2-core</a>: The core code of Eln2. This code is intended to be 100% portable between MC versions.
@@ -557,12 +545,12 @@ fruits2.forEach{println(it)}
 <p>As a result, all of those imports will be accessible to be used for Minecraft code.</p>
 <p>At some point, I want to move these repositories to <code>https://github.com/eln2</code>, namely, we would probably call them <code>eln2-mc-integration</code>, <code>eln2-core</code>, and <code>eln2-web</code> at that organization.</p>
 <p>The different versions of the eln2 Minecraft integrations (say 1.12, 1.14, 1.15, etc) would be branches by those names on that repository, which matches the way that UMC is structured.</p>
-<h3 id="log-collection-server">Log collection server</h3>
+<h2 id="log-collection-server">Log collection server</h2>
 <p>For Eln2 pre-alpha development, we will have a crash log handler. What will happen is if the game crashes, we will automatically take the log, and send it out to the development team to a server that can recieve these logs and then we can process them.</p>
 <p>This will aid in development, and will likely be removed at the alpha stage unless we find it useful. At the pre-alpha stage, we will also send the UUID of players to be sent back as well so that we know who had the bug.</p>
 <h2 id="phases">Phases</h2>
 <p>Just a FYI, these will all be copied sooner or later to GitHub issues, so that it's easier to track progress.</p>
-<h3 id="phase-1-universalmodlib">Phase 1: UniversalModLib</h3>
+<h2 id="phase-1-universalmodlib">Phase 1: UniversalModLib</h2>
 <ul>
 <li>[ ] configure UniversalModLib<ul>
 <li>[ ] fix UniiversalModLib</li>
@@ -573,13 +561,13 @@ fruits2.forEach{println(it)}
 <li>[ ] crash logger</li>
 <li>[ ] rebuild MNA from scratch (apparently)</li>
 </ul>
-<h4 id="verification">Verification:</h4>
+<h3 id="verification">Verification:</h3>
 <ul>
 <li>[ ] running <code>./gradlew build</code> in the main workspace will prepare libraries and compile our mod to a functional jar</li>
 <li>[ ] works in TravisCI</li>
 <li>[ ] config option works</li>
 </ul>
-<h3 id="phase-2-singlenode">Phase 2: SingleNode</h3>
+<h2 id="phase-2-singlenode">Phase 2: SingleNode</h2>
 <p>I say models and textures, but these are basic as almost all of these items will be removed/edited later.</p>
 <ul>
 <li>[ ] SingleCable: a current based uninsulated cable that connects similarly to RF pipes<ul>
@@ -643,7 +631,7 @@ fruits2.forEach{println(it)}
 </li>
 </ul>
 <p>NOTE: Models are not a priority at this stage as most of the Single* items will be removed later.</p>
-<h4 id="validation">Validation</h4>
+<h3 id="validation">Validation</h3>
 <ul>
 <li>[ ] Verify Electrical Sim works and that reasonable currents are being moved. Get Matrix Size to the user</li>
 <li>[ ] Verify Thermal Sim works and that heat transfers through items properly</li>
@@ -652,12 +640,12 @@ fruits2.forEach{println(it)}
 <li>[ ] Verify that Inductors work as they should IRL</li>
 <li>[ ] Verify that Batteries work as they should IRL</li>
 </ul>
-<h3 id="phase-3-multinode">Phase 3: MultiNode</h3>
+<h2 id="phase-3-multinode">Phase 3: MultiNode</h2>
 <ul>
 <li>[ ] autominer</li>
 <li>[ ] solar panels</li>
 </ul>
-<h3 id="phase-4-sixnode">Phase 4: SixNode</h3>
+<h2 id="phase-4-sixnode">Phase 4: SixNode</h2>
 <ul>
 <li>[ ] "New" SixNode<ul>
 <li>[ ] cables</li>
@@ -673,12 +661,12 @@ fruits2.forEach{println(it)}
 <li>[ ] API v1.0</li>
 <li>[ ] Some reasonable textures</li>
 </ul>
-<h3 id="phase-5-alpha-release-and-debugging">Phase 5: Alpha Release and debugging</h3>
+<h2 id="phase-5-alpha-release-and-debugging">Phase 5: Alpha Release and debugging</h2>
 <ul>
 <li>[ ] remove developer disclaimer config</li>
 <li>[ ] Initial rounds of bugfixing</li>
 </ul>
-<h3 id="phase-6-machines-and-equipment">Phase 6: Machines and equipment</h3>
+<h2 id="phase-6-machines-and-equipment">Phase 6: Machines and equipment</h2>
 <p>In no particular order:</p>
 <ul>
 <li>[ ] mod integration<ul>
