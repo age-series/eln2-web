@@ -27,13 +27,13 @@ will possibly make a lot more sense after reading that book.
 ## Project Structure
 
 There are multiple repositories:
-  * [electrical-age-1.12](https://github.com/jrddunbr/electrical-age-1.12): The actual Minecraft part of Electrical Age 2, written for MC 1.12
-  * [eln2-core](https://github.com/jrddunbr/eln2-core): The core code of Eln2. This code is intended to be 100% portable between MC versions.
-  * [eln2-web](https://github.com/jrddunbr/eln2-web): This is the website you are reading.
+  * [electrical-age-1.12](https://github.com/eln2/eln2-mc-integration): The actual Minecraft part of Electrical Age 2, written for MC 1.12
+  * [eln2-core](https://github.com/eln2/eln2-core): The core code of Eln2. This code is intended to be 100% portable between MC versions.
+  * [eln2-web](https://github.com/eln2/eln2-web): This is the website you are reading.
 
 Inside the repositories, you will find a lot of `org.eln2` repositories:
 
-In the `electrical-age-1.12` repository, one will find roughly the following:
+In the `eln2-mc-integration` repository, one will find roughly the following (on the 1.12 branch):
 
 * `org.eln2`
     * `mc1.12`
@@ -49,11 +49,9 @@ In the `eln2-core` repository, one will find roughly the following:
     * `math`: all sorts of mathy stuff
     * `sim`: all sorts of simulation code (mna, electrical, thermal)
 
-When you build Eln2, you will generally operate out of the `electrical-age-1.12` folder, and that will load in UMC as well as Eln2-core.
+When you build Eln2, you will generally operate out of the `eln2-mc-integration` folder, and that will load in UMC as well as Eln2-core.
 
 As a result, all of those imports will be accessible to be used for Minecraft code.
-
-At some point, I want to move these repositories to `https://github.com/eln2`, namely, we would probably call them `eln2-mc-integration`, `eln2-core`, and `eln2-web` at that organization.
 
 The different versions of the eln2 Minecraft integrations (say 1.12, 1.14, 1.15, etc) would be branches by those names on that repository, which matches the way that UMC is structured.
 
@@ -61,11 +59,11 @@ The different versions of the eln2 Minecraft integrations (say 1.12, 1.14, 1.15,
 
 For Eln2 pre-alpha development, we will have a crash log handler. What will happen is if the game crashes, we will automatically take the log, and send it out to the development team to a server that can recieve these logs and then we can process them.
 
-This will aid in development, and will likely be removed at the alpha stage unless we find it useful. At the pre-alpha stage, we will also send the UUID of players to be sent back as well so that we know who had the bug.
+This will aid in development, and will likely be removed at the alpha stage unless we find it useful. At the pre-alpha stage, we will also send the UUID of players so that we know who had the bug.
 
 ## Phases
 
-Just a FYI, these will all be copied sooner or later to GitHub issues, so that it's easier to track progress.
+Just a FYI, these will all be copied sooner or later to GitHub issues, so that it's easier to track progress. There will be a proper set of milestones for this on each of the relevant repositories.
 
 ## Phase 1: UniversalModLib
 

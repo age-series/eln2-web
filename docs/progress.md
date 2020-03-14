@@ -2,6 +2,10 @@
 
 General progress information about Eln2 development can be found here.
 
+# Weeks 4-11 (Jan 18 - Mar 14)
+
+* We were both really busy, and did not have time to develop code. :/
+
 # Week 3 (Jan 12 - Jan 18)
 
 * `Grissess` works a lot on the MNA solver after `jrddunbr` tries to do some work but encounters some difficulty with configuring the datatypes efficiently. He also uses a similar methodology to the Falstad solver by having "stamps" that modify the matrix from the components. It's worth noting that the old MNA also had the concept of a stamp, and also had some matricies, but the names were a bit.. odd, and difficult to follow.
