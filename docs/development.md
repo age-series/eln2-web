@@ -4,7 +4,7 @@ Some tidbits about development.
 
 ## Licensing
 
-Right now `Grissess` and `jrddunbr` have basically written the mod from scratch. The current suggestion is to be alright with anything from MIT license up to the old Eln license, but likely we will LGPLv2+ unless we see reason to license it otherwise.
+Eln2 is licensed under the MIT, license except for components of UMC and IR-Integration that remain LGPLv2.1
 
 Models and artwork need to be under some creative commons license that allows modification and distribution.
 
@@ -54,6 +54,21 @@ When you build Eln2, you will generally operate out of the `eln2-mc-integration`
 As a result, all of those imports will be accessible to be used for Minecraft code.
 
 The different versions of the eln2 Minecraft integrations (say 1.12, 1.14, 1.15, etc) would be branches by those names on that repository, which matches the way that UMC is structured.
+
+A proposal by Baughn has us changing this to a monorepo at [eln2/eln2](https://github.com/eln2/eln2), where core and integration would live. UMC would become a git subtree and the website would stay seperate.
+
+This moves things around a little - the paths then become something more like this:
+
+* `org.eln2`
+    * `integration`: Minecraft version specific code. Stored in /integration-<mcversion> project directory
+        * `shared`: Shared integration code between versions. Stored in /shared source code folder (maybe symlinked into project or something?)
+    * `core`: Eln2 core code, such as the MNA
+        * `math`: All sorts of mathy stuff
+        * `data`: Data structures, algs.
+        * `serialization`: All of our serialization code.
+        * `sim`: All sorts of sim code (mna, electrical, thermal, etc.)
+            * `electrical.mna`: The MNA code
+            * `thermal`: The thermal code
 
 ## Log collection server
 
