@@ -2,6 +2,15 @@
 
 General progress information about Eln2 development can be found here.
 
+# Week 15 (April 5 - April 11)
+
+* `jrddunbr` updates the website as there is growing interest in doing Eln2 work. Website was not updated because website development tool was not cooperating.
+
+# Week 13 - 14 (March 22 - April 4)
+
+* We discovered Vintage Story is a thing and they have a much better modding API. `Caeleron` joins the dev team and focuses mostly on making Vintage Story moding work.
+* `cam72cam` pushes a new UMC release that has a brand new Gradle deployment system that removes the need for special powershell/shell scripts to set up their environment. We have yet to integrate that into our codebase.
+
 # Week 12 (Mar 15 - Mar 21)
 
 * `Baughn` said he has free time coming up, and so we brought him up to speed some on how Eln2 development is going and how to contribute. He suggested we convert to a monorepo, and so we have [prepared such a repository](https://github.com/eln2/eln2). We are still waiting to hear from Grissess and get a concensus on that decision before going with it.
