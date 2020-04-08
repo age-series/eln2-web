@@ -4,36 +4,29 @@ Some tidbits about development.
 
 ## Licensing
 
-Eln2 is licensed under the MIT, license except for components of UMC and IR-Integration that remain LGPLv2.1
+Eln2 is licensed under the MIT license.
 
-Models and artwork need to be under some creative commons license that allows modification and distribution.
+Models and artwork need to be under some creative commons license that allows modification and distribution *with* commercial use, [such as this license](https://creativecommons.org/licenses/by-sa/4.0/).
 
 ## Language(s)
 
-Eln2 is to be written in entirely **Kotlin**, except for where it is not possible.
-
-Tutorials on Kotlin can be found online if you are familiar with Java. It is not too much different, but if you don't know what a functional programming language is, I'd suggest [reading at least part of this book](http://learnyouahaskell.com/learnyouahaskell.pdf) ([amazon](https://www.amazon.com/Learn-You-Haskell-Great-Good-dp-1593272839/dp/1593272839/)) before starting development.
-
-Things like this:
-
-```kotlin
-val fruits = ["bananas", "oranges", "apples"]
-val fruits2 = fruits.filter{"e" in it}.map{it.toUpperCase()}
-fruits2.forEach{println(it)}
-```
-
-will possibly make a lot more sense after reading that book.
+Eln2 is to be entirely written in **Kotlin**, except for where it is not possible. Kotlin is very similar to Java and runs on the JVM (it's similar to how Scala works).
 
 ## Project Structure
 
-There are multiple repositories:
-  * [electrical-age-1.12](https://github.com/eln2/eln2-mc-integration): The actual Minecraft part of Electrical Age 2, written for MC 1.12
-  * [eln2-core](https://github.com/eln2/eln2-core): The core code of Eln2. This code is intended to be 100% portable between MC versions.
+There are two repositories:
+  * [eln2](https://github.com/eln2/eln2): This is all of the Eln2 code.
   * [eln2-web](https://github.com/eln2/eln2-web): This is the website you are reading.
+
+Inside the `eln2` repository, you will find multiple folders:
+  * `core` - All of the core MNA, thermal, and shaft based simulation code. No Minecraft or VS code ends up here.
+  * `integration-mc<version>` - Integration code that acts as a middleware between `core` and UMC and Forge.
+  * `integration-vs` - Integration code that acts as middleware between `core` and the Vintage Story Modding API.
+  * `shared` - Hopefully, some shared code that can be shared between different versions of the Minecraft Integration code.
 
 Inside the repositories, you will find a lot of `org.eln2` repositories:
 
-In the `eln2-mc-integration` repository, one will find roughly the following (on the 1.12 branch):
+In the `integration-mc1-12` repository, one will find roughly the following:
 
 * `org.eln2`
     * `mc1.12`
@@ -43,21 +36,15 @@ In the `eln2-mc-integration` repository, one will find roughly the following (on
         * `sixnode`: all sixnode (6 sides of a block) TE's
         * `multinode`: all multi block TE's
 
-In the `eln2-core` repository, one will find roughly the following:
+In the `core` folder, one will find roughly the following:
 
 * `org.eln2`
     * `math`: all sorts of mathy stuff
     * `sim`: all sorts of simulation code (mna, electrical, thermal)
 
-When you build Eln2, you will generally operate out of the `eln2-mc-integration` folder, and that will load in UMC as well as Eln2-core.
+When you build Eln2, you will generally operate out of the Integration folder for the platform you are using, and that will load in the mod libraries and `core`.
 
-As a result, all of those imports will be accessible to be used for Minecraft code.
-
-The different versions of the eln2 Minecraft integrations (say 1.12, 1.14, 1.15, etc) would be branches by those names on that repository, which matches the way that UMC is structured.
-
-A proposal by Baughn has us changing this to a monorepo at [eln2/eln2](https://github.com/eln2/eln2), where core and integration would live. UMC would become a git subtree and the website would stay seperate.
-
-This moves things around a little - the paths then become something more like this:
+Here's a general overview of what the class heiarchy may look like:
 
 * `org.eln2`
     * `integration`: Minecraft version specific code. Stored in /integration-<mcversion> project directory
@@ -72,7 +59,7 @@ This moves things around a little - the paths then become something more like th
 
 ## Log collection server
 
-For Eln2 pre-alpha development, we will have a crash log handler. What will happen is if the game crashes, we will automatically take the log, and send it out to the development team to a server that can recieve these logs and then we can process them.
+For Eln2 pre-alpha development, we will have a crash log handler. What will happen is if the game crashes, we will automatically take the log, and send it out to the development team to a server that can receive these logs and then we can process them.
 
 This will aid in development, and will likely be removed at the alpha stage unless we find it useful. At the pre-alpha stage, we will also send the UUID of players so that we know who had the bug.
 
@@ -80,19 +67,34 @@ This will aid in development, and will likely be removed at the alpha stage unle
 
 Just a FYI, these will all be copied sooner or later to GitHub issues, so that it's easier to track progress. There will be a proper set of milestones for this on each of the relevant repositories.
 
-## Phase 1: UniversalModLib
+## Phase 1: Modding Integration
 
+Core:
+- [ ] MNA finished
+- [ ] Centralized log collection server
+
+Minecraft:
 - [ ] configure UniversalModLib
-    - [ ] fix UniiversalModLib
-    - [ ] package UniversalModLib
 - [ ] config file disclaimer option (disables the mod unless the user agrees to not pester the devs before alpha)
 - [ ] crash logger
-- [ ] rebuild MNA from scratch (apparently)
+
+Vintage Story:
+- [ ] Make build environment cross-platform with easy to use instructions
+- [ ] config file disclaimer option (disables the mod unless the user agrees to not pester the devs before alpha)
+- [ ] crash logger
 
 ### Verification:
 
+Core:
+- [ ] works in TravisCI with unit tests possible
+- [ ] Crash logs received from both platforms.
+
+Minecraft:
 - [ ] running `./gradlew build` in the main workspace will prepare libraries and compile our mod to a functional jar
-- [ ] works in TravisCI
+- [ ] config option works
+
+Vintage Story:
+- [ ] Somehow, build works? Ability to step the MNA from mod console may be sufficient testing.
 - [ ] config option works
 
 ## Phase 2: SingleNode
