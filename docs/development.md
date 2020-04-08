@@ -70,15 +70,18 @@ Just a FYI, these will all be copied sooner or later to GitHub issues, so that i
 ## Phase 1: Modding Integration
 
 Core:
+
 - [ ] MNA finished
 - [ ] Centralized log collection server
 
 Minecraft:
+
 - [ ] configure UniversalModLib
 - [ ] config file disclaimer option (disables the mod unless the user agrees to not pester the devs before alpha)
 - [ ] crash logger
 
 Vintage Story:
+
 - [ ] Make build environment cross-platform with easy to use instructions
 - [ ] config file disclaimer option (disables the mod unless the user agrees to not pester the devs before alpha)
 - [ ] crash logger
@@ -86,14 +89,17 @@ Vintage Story:
 ### Verification:
 
 Core:
+
 - [ ] works in TravisCI with unit tests possible
 - [ ] Crash logs received from both platforms.
 
 Minecraft:
+
 - [ ] running `./gradlew build` in the main workspace will prepare libraries and compile our mod to a functional jar
 - [ ] config option works
 
 Vintage Story:
+
 - [ ] Somehow, build works? Ability to step the MNA from mod console may be sufficient testing.
 - [ ] config option works
 
