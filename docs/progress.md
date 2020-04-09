@@ -4,6 +4,9 @@ General progress information about Eln2 development can be found here.
 
 # Week 15 (April 5 - April 11)
 
+* `Baughn` helped us configure CI using GitHub actions and `Caeleron` worked on making our standardized tests meet those CI testing requirements.
+* `Baughn` suggests we set up better tests which `Grissess` and `jrddunbr` will do.
+* `Baughn` and `jrddunbr` set up the Discord chat on Eln to have new chat rooms for developers.
 * `jrddunbr` updates the website as there is growing interest in doing Eln2 work. Website was not updated because website development tool was not cooperating.
 
 # Week 13 - 14 (March 22 - April 4)
