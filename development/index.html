@@ -503,10 +503,10 @@
   * <code>integration-vs</code> - Integration code that acts as middleware between <code>core</code> and the Vintage Story Modding API.
   * <code>shared</code> - Hopefully, some shared code that can be shared between different versions of the Minecraft Integration code.</p>
 <p>Inside the repositories, you will find a lot of <code>org.eln2</code> repositories:</p>
-<p>In the <code>integration-mc1-12</code> repository, one will find roughly the following:</p>
+<p>In the <code>integration-mc1-14</code> repository, one will find roughly the following:</p>
 <ul>
 <li><code>org.eln2</code><ul>
-<li><code>mc1.12</code><ul>
+<li><code>mc1.14</code><ul>
 <li><code>block</code>: all regular minecrafty blocks (ores, ..) that are not TE's</li>
 <li><code>item</code>: all items</li>
 <li><code>simplenode</code>: all single block TE's</li>
@@ -529,7 +529,7 @@
 <p>Here's a general overview of what the class heiarchy may look like:</p>
 <ul>
 <li><code>org.eln2</code><ul>
-<li><code>integration</code>: Minecraft version specific code. Stored in /integration-<mcversion> project directory<ul>
+<li><code>integration</code>: Minecraft version specific code. Stored in /integration-mcversion project directory<ul>
 <li><code>shared</code>: Shared integration code between versions. Stored in /shared source code folder (maybe symlinked into project or something?)</li>
 </ul>
 </li>
@@ -555,30 +555,30 @@
 <h2 id="phase-1-modding-integration">Phase 1: Modding Integration</h2>
 <p>Core:</p>
 <ul>
-<li>[ ] MNA finished</li>
+<li>[x] MNA finished</li>
 <li>[ ] Centralized log collection server</li>
 </ul>
 <p>Minecraft:</p>
 <ul>
-<li>[ ] configure UniversalModLib</li>
+<li>[x] configure UniversalModLib</li>
 <li>[ ] config file disclaimer option (disables the mod unless the user agrees to not pester the devs before alpha)</li>
 <li>[ ] crash logger</li>
 </ul>
 <p>Vintage Story:</p>
 <ul>
-<li>[ ] Make build environment cross-platform with easy to use instructions</li>
+<li>[x] Make build environment cross-platform with easy to use instructions</li>
 <li>[ ] config file disclaimer option (disables the mod unless the user agrees to not pester the devs before alpha)</li>
 <li>[ ] crash logger</li>
 </ul>
 <h3 id="verification">Verification:</h3>
 <p>Core:</p>
 <ul>
-<li>[ ] works in TravisCI with unit tests possible</li>
+<li>[x] works in GitHub Actions with unit test</li>
 <li>[ ] Crash logs received from both platforms.</li>
 </ul>
 <p>Minecraft:</p>
 <ul>
-<li>[ ] running <code>./gradlew build</code> in the main workspace will prepare libraries and compile our mod to a functional jar</li>
+<li>[x] running <code>./gradlew build</code> in the main workspace will prepare libraries and compile our mod to a functional jar</li>
 <li>[ ] config option works</li>
 </ul>
 <p>Vintage Story:</p>
