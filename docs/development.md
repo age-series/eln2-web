@@ -26,10 +26,10 @@ Inside the `eln2` repository, you will find multiple folders:
 
 Inside the repositories, you will find a lot of `org.eln2` repositories:
 
-In the `integration-mc1-12` repository, one will find roughly the following:
+In the `integration-mc1-14` repository, one will find roughly the following:
 
 * `org.eln2`
-    * `mc1.12`
+    * `mc1.14`
         * `block`: all regular minecrafty blocks (ores, ..) that are not TE's
         * `item`: all items
         * `simplenode`: all single block TE's
@@ -47,7 +47,7 @@ When you build Eln2, you will generally operate out of the Integration folder fo
 Here's a general overview of what the class heiarchy may look like:
 
 * `org.eln2`
-    * `integration`: Minecraft version specific code. Stored in /integration-<mcversion> project directory
+    * `integration`: Minecraft version specific code. Stored in /integration-mcversion project directory
         * `shared`: Shared integration code between versions. Stored in /shared source code folder (maybe symlinked into project or something?)
     * `core`: Eln2 core code, such as the MNA
         * `math`: All sorts of mathy stuff
@@ -71,18 +71,18 @@ Just a FYI, these will all be copied sooner or later to GitHub issues, so that i
 
 Core:
 
-- [ ] MNA finished
+- [x] MNA finished
 - [ ] Centralized log collection server
 
 Minecraft:
 
-- [ ] configure UniversalModLib
+- [x] configure UniversalModLib
 - [ ] config file disclaimer option (disables the mod unless the user agrees to not pester the devs before alpha)
 - [ ] crash logger
 
 Vintage Story:
 
-- [ ] Make build environment cross-platform with easy to use instructions
+- [x] Make build environment cross-platform with easy to use instructions
 - [ ] config file disclaimer option (disables the mod unless the user agrees to not pester the devs before alpha)
 - [ ] crash logger
 
@@ -90,12 +90,12 @@ Vintage Story:
 
 Core:
 
-- [ ] works in TravisCI with unit tests possible
+- [x] works in GitHub Actions with unit test
 - [ ] Crash logs received from both platforms.
 
 Minecraft:
 
-- [ ] running `./gradlew build` in the main workspace will prepare libraries and compile our mod to a functional jar
+- [x] running `./gradlew build` in the main workspace will prepare libraries and compile our mod to a functional jar
 - [ ] config option works
 
 Vintage Story:

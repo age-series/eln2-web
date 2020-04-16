@@ -2,12 +2,23 @@
 
 General progress information about Eln2 development can be found here.
 
+# Week 16 (April 12 - April 18)
+
+* `jrddunbr` worked on various parsers and the AsmComputer
+* `jrddunbr` and `Caeleron` worked on Vintage Story builds using VS Codium, as well as developing the Blueprint Core application
+* `Caeleron` worked on code cleanup as well as working on a GNU Plot importing system.
+* `Baughn` continued to work on CI progress and started working on Integration for Minecraft
+* The community voted for Minecraft 1.14 development over Minecraft 1.12 development, after `Baughn` and `jrddunbr` noticed that it would be difficult to use Gradle 4.10.3 for any further progress on the project, and thinking that Miinecraft 1.12 did not support Gradle 5 and Forge Gradle 3.
+* We are currently nearing the end of Phase 1. Woo!
+* `Baughn` pulled in UMC as a Git Subtree.
+
 # Week 15 (April 5 - April 11)
 
 * `Baughn` helped us configure CI using GitHub actions and `Caeleron` worked on making our standardized tests meet those CI testing requirements.
 * `Baughn` suggests we set up better tests which `Grissess` and `jrddunbr` will do.
 * `Baughn` and `jrddunbr` set up the Discord chat on Eln to have new chat rooms for developers.
 * `jrddunbr` updates the website as there is growing interest in doing Eln2 work. Website was not updated because website development tool was not cooperating.
+* `Baughn` updated our Gradle configs and also helped us move to Gradle 5
 
 # Week 13 - 14 (March 22 - April 4)
 
