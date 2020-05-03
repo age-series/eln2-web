@@ -15,10 +15,12 @@ Eln2 Core, Apps, and Minecraft Integration is going to be written in Kotlin. Net
 ## Project Structure
 
 There are two repositories:
+
   * [eln2](https://github.com/eln2/eln2): This is all of the Eln2 code.
   * [eln2-web](https://github.com/eln2/eln2-web): This is the website you are reading.
 
 Inside the `eln2` repository, you will find multiple folders:
+
   * `core` - All of the core MNA, thermal, and shaft based simulation code. No Minecraft or VS code ends up here.
   * `apps` - Standalone Applications and daemons.
   * `integration-mc<version>` - Integration code that is between `core` and Minecraft Forge/Bookshelf.
