@@ -442,15 +442,19 @@
 <h2 id="languages">Languages</h2>
 <p>Eln2 Core, Apps, and Minecraft Integration is going to be written in Kotlin. Network sockets and shared memory will use Google Protobuffs, and Vintage Story will use C#. The log server uses Rust.</p>
 <h2 id="project-structure">Project Structure</h2>
-<p>There are two repositories:
-  * <a href="https://github.com/eln2/eln2">eln2</a>: This is all of the Eln2 code.
-  * <a href="https://github.com/eln2/eln2-web">eln2-web</a>: This is the website you are reading.</p>
-<p>Inside the <code>eln2</code> repository, you will find multiple folders:
-  * <code>core</code> - All of the core MNA, thermal, and shaft based simulation code. No Minecraft or VS code ends up here.
-  * <code>apps</code> - Standalone Applications and daemons.
-  * <code>integration-mc&lt;version&gt;</code> - Integration code that is between <code>core</code> and Minecraft Forge/Bookshelf.
-  * <code>integration-vs</code> - Integration code that is between <code>core</code> and the Vintage Story Modding API.
-  * <code>logcollector</code> - our Rust log collector.</p>
+<p>There are two repositories:</p>
+<ul>
+<li><a href="https://github.com/eln2/eln2">eln2</a>: This is all of the Eln2 code.</li>
+<li><a href="https://github.com/eln2/eln2-web">eln2-web</a>: This is the website you are reading.</li>
+</ul>
+<p>Inside the <code>eln2</code> repository, you will find multiple folders:</p>
+<ul>
+<li><code>core</code> - All of the core MNA, thermal, and shaft based simulation code. No Minecraft or VS code ends up here.</li>
+<li><code>apps</code> - Standalone Applications and daemons.</li>
+<li><code>integration-mc&lt;version&gt;</code> - Integration code that is between <code>core</code> and Minecraft Forge/Bookshelf.</li>
+<li><code>integration-vs</code> - Integration code that is between <code>core</code> and the Vintage Story Modding API.</li>
+<li><code>logcollector</code> - our Rust log collector.</li>
+</ul>
 <h2 id="log-collection-server">Log collection server</h2>
 <p>For Eln2 pre-alpha development, we will have a crash log handler. What will happen is if the game crashes, we will automatically take the log, and send it out to the development team to a server that can receive these logs and then we can process them.</p>
 <p>This will aid in development, and will likely be removed at the alpha stage unless we find it useful. At the pre-alpha stage, we will also send the UUID of players so that we know who had the bug.</p>
