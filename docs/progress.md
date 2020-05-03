@@ -2,6 +2,17 @@
 
 General progress information about Eln2 development can be found here.
 
+# Week 18 (April 26 - May 2)
+
+A slight hiatus while `Caeleron` has exams, `jrddunbr` has interviews.
+* `Baughn` updated the codebase to 1.15.2 and included Bookshelf as our UMC replacement.
+
+# Week 17 (April 19 - April 25)
+
+* `Caeleron` worked on uarchComputer
+* `Baughn` migrated us away from UMC. Baughn wanted something different after working with it briefly.
+* `Grissess` did some work with the Falstad importer and fixed some other minor MNA bugs.
+
 # Week 16 (April 12 - April 18)
 
 * `jrddunbr` worked on various parsers and the AsmComputer

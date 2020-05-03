@@ -8,9 +8,9 @@ Eln2 is licensed under the MIT license.
 
 Models and artwork need to be under some creative commons license that allows modification and distribution *with* commercial use, [such as this license](https://creativecommons.org/licenses/by-sa/4.0/).
 
-## Language(s)
+## Languages
 
-Eln2 is to be entirely written in **Kotlin**, except for where it is not possible. Kotlin is very similar to Java and runs on the JVM (it's similar to how Scala works).
+Eln2 Core, Apps, and Minecraft Integration is going to be written in Kotlin. Network sockets and shared memory will use Google Protobuffs, and Vintage Story will use C#. The log server uses Rust.
 
 ## Project Structure
 
@@ -20,42 +20,10 @@ There are two repositories:
 
 Inside the `eln2` repository, you will find multiple folders:
   * `core` - All of the core MNA, thermal, and shaft based simulation code. No Minecraft or VS code ends up here.
-  * `integration-mc<version>` - Integration code that acts as a middleware between `core` and UMC and Forge.
-  * `integration-vs` - Integration code that acts as middleware between `core` and the Vintage Story Modding API.
-  * `shared` - Hopefully, some shared code that can be shared between different versions of the Minecraft Integration code.
-
-Inside the repositories, you will find a lot of `org.eln2` repositories:
-
-In the `integration-mc1-14` repository, one will find roughly the following:
-
-* `org.eln2`
-    * `mc1.14`
-        * `block`: all regular minecrafty blocks (ores, ..) that are not TE's
-        * `item`: all items
-        * `simplenode`: all single block TE's
-        * `sixnode`: all sixnode (6 sides of a block) TE's
-        * `multinode`: all multi block TE's
-
-In the `core` folder, one will find roughly the following:
-
-* `org.eln2`
-    * `math`: all sorts of mathy stuff
-    * `sim`: all sorts of simulation code (mna, electrical, thermal)
-
-When you build Eln2, you will generally operate out of the Integration folder for the platform you are using, and that will load in the mod libraries and `core`.
-
-Here's a general overview of what the class heiarchy may look like:
-
-* `org.eln2`
-    * `integration`: Minecraft version specific code. Stored in /integration-mcversion project directory
-        * `shared`: Shared integration code between versions. Stored in /shared source code folder (maybe symlinked into project or something?)
-    * `core`: Eln2 core code, such as the MNA
-        * `math`: All sorts of mathy stuff
-        * `data`: Data structures, algs.
-        * `serialization`: All of our serialization code.
-        * `sim`: All sorts of sim code (mna, electrical, thermal, etc.)
-            * `electrical.mna`: The MNA code
-            * `thermal`: The thermal code
+  * `apps` - Standalone Applications and daemons.
+  * `integration-mc<version>` - Integration code that is between `core` and Minecraft Forge/Bookshelf.
+  * `integration-vs` - Integration code that is between `core` and the Vintage Story Modding API.
+  * `logcollector` - our Rust log collector.
 
 ## Log collection server
 
@@ -67,43 +35,21 @@ This will aid in development, and will likely be removed at the alpha stage unle
 
 Just a FYI, these will all be copied sooner or later to GitHub issues, so that it's easier to track progress. There will be a proper set of milestones for this on each of the relevant repositories.
 
-## Phase 1: Modding Integration
+## Phase 1: Modding Integration [DONE]
 
 Core:
 
 - [x] MNA finished
-- [ ] Centralized log collection server
 
 Minecraft:
 
 - [x] configure UniversalModLib
-- [ ] config file disclaimer option (disables the mod unless the user agrees to not pester the devs before alpha)
-- [ ] crash logger
 
 Vintage Story:
 
 - [x] Make build environment cross-platform with easy to use instructions
-- [ ] config file disclaimer option (disables the mod unless the user agrees to not pester the devs before alpha)
-- [ ] crash logger
 
-### Verification:
-
-Core:
-
-- [x] works in GitHub Actions with unit test
-- [ ] Crash logs received from both platforms.
-
-Minecraft:
-
-- [x] running `./gradlew build` in the main workspace will prepare libraries and compile our mod to a functional jar
-- [ ] config option works
-
-Vintage Story:
-
-- [ ] Somehow, build works? Ability to step the MNA from mod console may be sufficient testing.
-- [ ] config option works
-
-## Phase 2: SingleNode
+## Phase 2: SingleNode [IN PROGRESS]
 
 I say models and textures, but these are basic as almost all of these items will be removed/edited later.
 
@@ -147,19 +93,16 @@ I say models and textures, but these are basic as almost all of these items will
 
 NOTE: Models are not a priority at this stage as most of the Single* items will be removed later.
 
-### Validation
+Log Server:
 
-- [ ] Verify Electrical Sim works and that reasonable currents are being moved. Get Matrix Size to the user
-- [ ] Verify Thermal Sim works and that heat transfers through items properly
-- [ ] Verify that WAILA-style integrations work with other mods.
-- [ ] Verify that Capacitors work as they should IRL
-- [ ] Verify that Inductors work as they should IRL
-- [ ] Verify that Batteries work as they should IRL
+- [ ] Centralized log collection server
+- [ ] config file disclaimer option (disables the mod unless the user agrees to not pester the devs before alpha)
+- [ ] crash logger
 
 ## Phase 3: MultiNode
 
-- [ ] autominer
 - [ ] solar panels
+- [ ] wind turbines
 
 ## Phase 4: SixNode
 
