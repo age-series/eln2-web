@@ -205,7 +205,7 @@
       
         <li class="md-nav__item">
   <a href="#languages" class="md-nav__link">
-    Language(s)
+    Languages
   </a>
   
 </li>
@@ -232,42 +232,16 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#phase-1-modding-integration" class="md-nav__link">
-    Phase 1: Modding Integration
+  <a href="#phase-1-modding-integration-done" class="md-nav__link">
+    Phase 1: Modding Integration [DONE]
   </a>
-  
-    <nav class="md-nav" aria-label="Phase 1: Modding Integration">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#verification" class="md-nav__link">
-    Verification:
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#phase-2-singlenode" class="md-nav__link">
-    Phase 2: SingleNode
+  <a href="#phase-2-singlenode-in-progress" class="md-nav__link">
+    Phase 2: SingleNode [IN PROGRESS]
   </a>
-  
-    <nav class="md-nav" aria-label="Phase 2: SingleNode">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#validation" class="md-nav__link">
-    Validation
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -376,7 +350,7 @@
       
         <li class="md-nav__item">
   <a href="#languages" class="md-nav__link">
-    Language(s)
+    Languages
   </a>
   
 </li>
@@ -403,42 +377,16 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#phase-1-modding-integration" class="md-nav__link">
-    Phase 1: Modding Integration
+  <a href="#phase-1-modding-integration-done" class="md-nav__link">
+    Phase 1: Modding Integration [DONE]
   </a>
-  
-    <nav class="md-nav" aria-label="Phase 1: Modding Integration">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#verification" class="md-nav__link">
-    Verification:
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#phase-2-singlenode" class="md-nav__link">
-    Phase 2: SingleNode
+  <a href="#phase-2-singlenode-in-progress" class="md-nav__link">
+    Phase 2: SingleNode [IN PROGRESS]
   </a>
-  
-    <nav class="md-nav" aria-label="Phase 2: SingleNode">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#validation" class="md-nav__link">
-    Validation
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -491,102 +439,37 @@
 <h2 id="licensing">Licensing</h2>
 <p>Eln2 is licensed under the MIT license.</p>
 <p>Models and artwork need to be under some creative commons license that allows modification and distribution <em>with</em> commercial use, <a href="https://creativecommons.org/licenses/by-sa/4.0/">such as this license</a>.</p>
-<h2 id="languages">Language(s)</h2>
-<p>Eln2 is to be entirely written in <strong>Kotlin</strong>, except for where it is not possible. Kotlin is very similar to Java and runs on the JVM (it's similar to how Scala works).</p>
+<h2 id="languages">Languages</h2>
+<p>Eln2 Core, Apps, and Minecraft Integration is going to be written in Kotlin. Network sockets and shared memory will use Google Protobuffs, and Vintage Story will use C#. The log server uses Rust.</p>
 <h2 id="project-structure">Project Structure</h2>
 <p>There are two repositories:
   * <a href="https://github.com/eln2/eln2">eln2</a>: This is all of the Eln2 code.
   * <a href="https://github.com/eln2/eln2-web">eln2-web</a>: This is the website you are reading.</p>
 <p>Inside the <code>eln2</code> repository, you will find multiple folders:
   * <code>core</code> - All of the core MNA, thermal, and shaft based simulation code. No Minecraft or VS code ends up here.
-  * <code>integration-mc&lt;version&gt;</code> - Integration code that acts as a middleware between <code>core</code> and UMC and Forge.
-  * <code>integration-vs</code> - Integration code that acts as middleware between <code>core</code> and the Vintage Story Modding API.
-  * <code>shared</code> - Hopefully, some shared code that can be shared between different versions of the Minecraft Integration code.</p>
-<p>Inside the repositories, you will find a lot of <code>org.eln2</code> repositories:</p>
-<p>In the <code>integration-mc1-14</code> repository, one will find roughly the following:</p>
-<ul>
-<li><code>org.eln2</code><ul>
-<li><code>mc1.14</code><ul>
-<li><code>block</code>: all regular minecrafty blocks (ores, ..) that are not TE's</li>
-<li><code>item</code>: all items</li>
-<li><code>simplenode</code>: all single block TE's</li>
-<li><code>sixnode</code>: all sixnode (6 sides of a block) TE's</li>
-<li><code>multinode</code>: all multi block TE's</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>In the <code>core</code> folder, one will find roughly the following:</p>
-<ul>
-<li><code>org.eln2</code><ul>
-<li><code>math</code>: all sorts of mathy stuff</li>
-<li><code>sim</code>: all sorts of simulation code (mna, electrical, thermal)</li>
-</ul>
-</li>
-</ul>
-<p>When you build Eln2, you will generally operate out of the Integration folder for the platform you are using, and that will load in the mod libraries and <code>core</code>.</p>
-<p>Here's a general overview of what the class heiarchy may look like:</p>
-<ul>
-<li><code>org.eln2</code><ul>
-<li><code>integration</code>: Minecraft version specific code. Stored in /integration-mcversion project directory<ul>
-<li><code>shared</code>: Shared integration code between versions. Stored in /shared source code folder (maybe symlinked into project or something?)</li>
-</ul>
-</li>
-<li><code>core</code>: Eln2 core code, such as the MNA<ul>
-<li><code>math</code>: All sorts of mathy stuff</li>
-<li><code>data</code>: Data structures, algs.</li>
-<li><code>serialization</code>: All of our serialization code.</li>
-<li><code>sim</code>: All sorts of sim code (mna, electrical, thermal, etc.)<ul>
-<li><code>electrical.mna</code>: The MNA code</li>
-<li><code>thermal</code>: The thermal code</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+  * <code>apps</code> - Standalone Applications and daemons.
+  * <code>integration-mc&lt;version&gt;</code> - Integration code that is between <code>core</code> and Minecraft Forge/Bookshelf.
+  * <code>integration-vs</code> - Integration code that is between <code>core</code> and the Vintage Story Modding API.
+  * <code>logcollector</code> - our Rust log collector.</p>
 <h2 id="log-collection-server">Log collection server</h2>
 <p>For Eln2 pre-alpha development, we will have a crash log handler. What will happen is if the game crashes, we will automatically take the log, and send it out to the development team to a server that can receive these logs and then we can process them.</p>
 <p>This will aid in development, and will likely be removed at the alpha stage unless we find it useful. At the pre-alpha stage, we will also send the UUID of players so that we know who had the bug.</p>
 <h2 id="phases">Phases</h2>
 <p>Just a FYI, these will all be copied sooner or later to GitHub issues, so that it's easier to track progress. There will be a proper set of milestones for this on each of the relevant repositories.</p>
-<h2 id="phase-1-modding-integration">Phase 1: Modding Integration</h2>
+<h2 id="phase-1-modding-integration-done">Phase 1: Modding Integration [DONE]</h2>
 <p>Core:</p>
 <ul>
 <li>[x] MNA finished</li>
-<li>[ ] Centralized log collection server</li>
 </ul>
 <p>Minecraft:</p>
 <ul>
 <li>[x] configure UniversalModLib</li>
-<li>[ ] config file disclaimer option (disables the mod unless the user agrees to not pester the devs before alpha)</li>
-<li>[ ] crash logger</li>
 </ul>
 <p>Vintage Story:</p>
 <ul>
 <li>[x] Make build environment cross-platform with easy to use instructions</li>
-<li>[ ] config file disclaimer option (disables the mod unless the user agrees to not pester the devs before alpha)</li>
-<li>[ ] crash logger</li>
 </ul>
-<h3 id="verification">Verification:</h3>
-<p>Core:</p>
-<ul>
-<li>[x] works in GitHub Actions with unit test</li>
-<li>[ ] Crash logs received from both platforms.</li>
-</ul>
-<p>Minecraft:</p>
-<ul>
-<li>[x] running <code>./gradlew build</code> in the main workspace will prepare libraries and compile our mod to a functional jar</li>
-<li>[ ] config option works</li>
-</ul>
-<p>Vintage Story:</p>
-<ul>
-<li>[ ] Somehow, build works? Ability to step the MNA from mod console may be sufficient testing.</li>
-<li>[ ] config option works</li>
-</ul>
-<h2 id="phase-2-singlenode">Phase 2: SingleNode</h2>
+<h2 id="phase-2-singlenode-in-progress">Phase 2: SingleNode [IN PROGRESS]</h2>
 <p>I say models and textures, but these are basic as almost all of these items will be removed/edited later.</p>
 <ul>
 <li>[ ] SingleCable: a current based uninsulated cable that connects similarly to RF pipes<ul>
@@ -650,19 +533,16 @@
 </li>
 </ul>
 <p>NOTE: Models are not a priority at this stage as most of the Single* items will be removed later.</p>
-<h3 id="validation">Validation</h3>
+<p>Log Server:</p>
 <ul>
-<li>[ ] Verify Electrical Sim works and that reasonable currents are being moved. Get Matrix Size to the user</li>
-<li>[ ] Verify Thermal Sim works and that heat transfers through items properly</li>
-<li>[ ] Verify that WAILA-style integrations work with other mods.</li>
-<li>[ ] Verify that Capacitors work as they should IRL</li>
-<li>[ ] Verify that Inductors work as they should IRL</li>
-<li>[ ] Verify that Batteries work as they should IRL</li>
+<li>[ ] Centralized log collection server</li>
+<li>[ ] config file disclaimer option (disables the mod unless the user agrees to not pester the devs before alpha)</li>
+<li>[ ] crash logger</li>
 </ul>
 <h2 id="phase-3-multinode">Phase 3: MultiNode</h2>
 <ul>
-<li>[ ] autominer</li>
 <li>[ ] solar panels</li>
+<li>[ ] wind turbines</li>
 </ul>
 <h2 id="phase-4-sixnode">Phase 4: SixNode</h2>
 <ul>
