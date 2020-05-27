@@ -2,6 +2,30 @@
 
 General progress information about Eln2 development can be found here.
 
+# Week 22 (May 24 - May 30)
+
+* `jrddunbr` and `Baughn` worked on new linting software
+* `jrddunbr` decided that there isn't really any great project management software out there that does what we need, and settled for GitHub's interface.
+* `Grissess` and `Caeleron` worked hard on some MNA hotfixes after discovering that capacitors do not work as intended.
+* `Caeleron` and `jrddunbr` are working on the ore processing systems for the game.
+
+# Week 21 (May 17 - May 23)
+
+* `jrddunbr` added the multimeter item (mostly useless) and set up some basic ore generation.
+* `Grissess` added some documentation to the MNA, worked on internal data structures.
+* `Grissess` worked on MultiMap
+* `Caeleron` worked on various documentation and code refactoring
+* `jrddunbr` worked on finding good project management software
+
+# Week 20 (May 10 - May 16)
+
+* `Baughn` set up protobuffs for the project's communication between the servers and clients.
+* `jrddunbr` did some organization cleanup, and added new guidelines for contributions.
+
+# Week 19 (May 3 - May 09)
+
+Bit more hiatus
+
 # Week 18 (April 26 - May 2)
 
 A slight hiatus while `Caeleron` has exams, `jrddunbr` has interviews.
