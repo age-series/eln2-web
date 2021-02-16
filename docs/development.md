@@ -23,8 +23,7 @@ Inside the `eln2` repository, you will find multiple folders:
 
   * `core` - All of the core MNA, thermal, and shaft based simulation code. No Minecraft or VS code ends up here.
   * `apps` - Standalone Applications and daemons.
-  * `integration-mc<version>` - Integration code that is between `core` and Minecraft Forge/Bookshelf.
-  * `integration-vs` - Integration code that is between `core` and the Vintage Story Modding API.
+  * `integration-mc<version>` - Basically, a Minecraft mod
   * `logcollector` - our Rust log collector.
 
 ## Log collection server
@@ -35,7 +34,7 @@ This will aid in development, and will likely be removed at the alpha stage unle
 
 ## Phases
 
-Just a FYI, these will all be copied sooner or later to GitHub issues, so that it's easier to track progress. There will be a proper set of milestones for this on each of the relevant repositories.
+Just a FYI, these will all be copied sooner or later to GitHub ~~issues~~ Kanban boards, so that it's easier to track progress. There will be a proper set of milestones for this on each of the relevant repositories.
 
 ## Phase 1: Modding Integration [DONE]
 
@@ -43,17 +42,11 @@ Core:
 
 - [x] MNA finished
 
-Minecraft:
-
-- [x] configure UniversalModLib
-
-Vintage Story:
-
-- [x] Make build environment cross-platform with easy to use instructions
-
 ## Phase 2: SingleNode [IN PROGRESS]
 
 I say models and textures, but these are basic as almost all of these items will be removed/edited later.
+
+- [ ] Sim API
 
 - [ ] SingleCable: a current based uninsulated cable that connects similarly to RF pipes
     - [ ] Electrical Sim
@@ -116,14 +109,14 @@ Log Server:
     - [ ] capacitors
     - [ ] lamp sockets
     - [ ] lamp supply
-- [ ] Remove Single* or at least delist it (shadow registry)
+- [ ] Remove Single* or at least de-list it (shadow registry)
 - [ ] API v1.0
 - [ ] Some reasonable textures
 
 ## Phase 5: Alpha Release and debugging
 
 - [ ] remove developer disclaimer config
-- [ ] Initial rounds of bugfixing
+- [ ] Initial rounds of bug fixing
 
 ## Phase 6: Machines and equipment
 

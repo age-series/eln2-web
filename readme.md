@@ -6,7 +6,7 @@ PR's accepted ONLY for the `master` repository. Don't propose changes to `gh-pag
 
 # Development
 
-All of the webpages are located in the `docs` folder.
+All the webpages are located in the `docs` folder.
 
 The page navigation bar config is located in `mkdocs.yml` under `nav:`
 
