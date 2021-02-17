@@ -5,4 +5,5 @@ nav:
   - Eln2 Progress: progress.md
   - Electrical Age Website: https://electrical-age.net
   - Electrical Age Wiki: https://wiki.electrical-age.net
-theme: material
+theme: lumen
+repo_url: https://github.com/eln2/eln2-web
