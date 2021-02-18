@@ -24,7 +24,6 @@ Inside the `eln2` repository, you will find multiple folders:
   * `core` - All of the core MNA, thermal, and shaft based simulation code. No Minecraft or VS code ends up here.
   * `apps` - Standalone Applications and daemons.
   * `integration-mc<version>` - Basically, a Minecraft mod
-  * `logcollector` - our Rust log collector.
 
 ## Log collection server
 
@@ -34,7 +33,7 @@ This will aid in development, and will likely be removed at the alpha stage unle
 
 ## Phases
 
-Just a FYI, these will all be copied sooner or later to GitHub ~~issues~~ Kanban boards, so that it's easier to track progress. There will be a proper set of milestones for this on each of the relevant repositories.
+Just a FYI, these will all be copied sooner or later to GitHub Kanban boards, so that it's easier to track progress. There will be a proper set of milestones for this on each of the relevant repositories.
 
 ## Phase 1: Modding Integration [DONE]
 
@@ -46,97 +45,92 @@ Core:
 
 I say models and textures, but these are basic as almost all of these items will be removed/edited later.
 
-- [ ] Sim API
+- [ ] Basic Sim API (not mod-integration ready necessarily)
 
 - [ ] SingleCable: a current based uninsulated cable that connects similarly to RF pipes
-    - [ ] Electrical Sim
-    - [ ] Thermal Sim
 - [ ] SingleSource: a simple voltage source block
-    - [ ] Electrical Sim
 - [ ] SingleGround: a simple ground pin
-    - [ ] Electrical Sim
 - [ ] CreativeHeater: a simple thermal cable heater
-    - [ ] Thermal Sim (creates heat at a predefined rate of energy)
-    - [ ] Inventory Texture
-    - [ ] Model
-- [ ] Passive Cooler: a simple heatsink with no fan
-    - [ ] Thermal Sim
-    - [ ] Inventory Texture
-    - [ ] Model (use existing 1.7.10?)
-- [ ] Active Cooler: an simple heatsink with a fan (12v, 24W)
-    - [ ] Electrical Sim
-    - [ ] Thermal Sim
-    - [ ] Inventory Texture
-    - [ ] Model (use existing 1.7.10?)
+- [ ] Heatsink: a simple heatsink with no fan
+- [ ] Heatsink with a fan: a simple heatsink with a fan (12v, 24W)
 - [ ] SingleSwitch: a current based uninsulated throw switch
-    - [ ] Electrical Sim
-    - [ ] Thermal Sim (similar to a cable, except when open we may reduce the thermal transfer)
 - [ ] SingleResistor: a basic capacitor
-    - [ ] Electrical Sim
-    - [ ] Thermal Sim
 - [ ] SingleCapacitor: a simple capacitor
-    - [ ] Electrical Sim
-    - [ ] Thermal Sim?
 - [ ] SingleInductor: a simple inductor
-    - [ ] Electrical Sim
-    - [ ] Thermal Sim?
 - [ ] Basic 12v Battery
-    - [ ] Electrical Sim
-    - [ ] Thermal Sim
-    - [ ] Inventory Texture
-    - [ ] Model (use existing 1.7.10?)
+
+- [ ] Shaft Networks:
+    - [ ] generator
+    - [ ] motor
+    - [ ] turbines
+    - [ ] clutch
+    - [ ] static shaft
 
 NOTE: Models are not a priority at this stage as most of the Single* items will be removed later.
 
 Log Server:
 
-- [ ] Centralized log collection server
-- [ ] config file disclaimer option (disables the mod unless the user agrees to not pester the devs before alpha)
-- [ ] crash logger
+- [ ] Centralized log collection server (might be postponed)
+- [ ] config file disclaimer option (disables the mod in un-obfuscated contexts, unless the user agrees to not pester the devs before 1.0)
+- [ ] crash logger code (catch Minecraft crashes?)
 
 ## Phase 3: MultiNode
 
 - [ ] solar panels
 - [ ] wind turbines
+- [ ] autominer
 
-## Phase 4: SixNode
+## Phase 4: SixNode (Tiny Node if FMB?)
 
 - [ ] "New" SixNode
     - [ ] cables
     - [ ] switches
     - [ ] resistors
-    - [ ] inductors
-    - [ ] capacitors
+    - [ ] inductor
+    - [ ] capacitor
     - [ ] lamp sockets
     - [ ] lamp supply
 - [ ] Remove Single* or at least de-list it (shadow registry)
-- [ ] API v1.0
-- [ ] Some reasonable textures
 
 ## Phase 5: Alpha Release and debugging
 
 - [ ] remove developer disclaimer config
 - [ ] Initial rounds of bug fixing
+- [ ] Some reasonable textures
+- [ ] API v1.0 Stabilization (for mod compatibility)
 
 ## Phase 6: Machines and equipment
 
 In no particular order:
 
 - [ ] mod integration
-    - [ ] pay back IR folks by making electric trains a bit more electric
-        - [ ] cantenaries (over track wires)
-    - [ ] oredict
+    - [ ] oredict (items, fluids, gasses)
 - [ ] Machines
-    - [ ] crusher - 100v to 800v
-    - [ ] roller - 100v to 800v
-    - [ ] press - 100v to 400v
-    - [ ] air compressor - 12v to 400v
-    - [ ] saw  - 12v to 200v
+    - [ ] crusher
+    - [ ] air compressor
     - [ ] experimental teleporter
+- [ ] Woodworking
+    - [ ] saw
+- [ ] Metalworking
+    - [ ] lathe (electric, shaft)
+    - [ ] mill (electric, shaft)
+    - [ ] drill press (electric, shaft)
+    - [ ] shaper (electric, shaft)
+    - [ ] press break (manual, electric, shaft)
+    - [ ] english wheel (electric, shaft)
+    - [ ] oxy-acetylene torch (gas)
+    - [ ] hot riveting machine (electric, shaft)
+    - [ ] electric welder (electric)
+    
+- [ ] Industrial Metwalworking
+    - [ ] rolling machine (electric, shaft)
+    - [ ] forge hammer (electric, shaft)
+    - [ ] forge heater (thermal)
+
 - [ ] Pole update material:
-    - [ ] data cables, fiber (Sigbus, OC/CC)
+    - [ ] data cables, fiber (Sigbus, OC)
         - [ ] fiber box
-    - [ ] 200v, 480v? (lower wires)
+    - [ ] 200v, 480v (lower wires)
     - [ ] 16kV (standard height poles)
     - [ ] 125kV power transmission (extra height poles and power transmission)
     - [ ] 220kV power transmission (power transfer towers)
@@ -146,17 +140,6 @@ In no particular order:
         - [ ] fiber box
     - [ ] <2kV cables/sigbus
         - [ ] Ground transformer
-- [ ] Shaft Networks:
-    - [ ] generator
-    - [ ] motor
-    - [ ] turbines
-    - [ ] clutch
-    - [ ] static shaft
-    - [ ] shaft machines
-        - [ ] crusher
-        - [ ] roller
-        - [ ] saw
-        - [ ] air compressor
 - [ ] Steam and Oil Processing
     - [ ] Oil fields
     - [ ] Oil rigs (factorio-esque with diminishing returns)
@@ -165,7 +148,4 @@ In no particular order:
     - [ ] Solar Tower (generates steam from heat)
     - [ ] *Nuclear Reactor* (generates hot coolant)
         - [ ] Liquid Heat Exchangers (uses hot coolant and water to make steam and cold coolant)
-    - [ ] More efficient gas turbine operationv (~60% return in lost heat energy)
         - [ ]Gas Heat Exchangers - uses exhaust from gas turbines to heat water to make steam
-- [ ] Ore Processing
-    - [ ] Some kind of *something*
