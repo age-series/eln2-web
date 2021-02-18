@@ -121,7 +121,7 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#phase-4-sixnode" class="nav-link">Phase 4: SixNode</a>
+            <li class="nav-item" data-level="2"><a href="#phase-4-sixnode-tiny-node-if-fmb" class="nav-link">Phase 4: SixNode (Tiny Node if FMB?)</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -158,13 +158,12 @@
 <li><code>core</code> - All of the core MNA, thermal, and shaft based simulation code. No Minecraft or VS code ends up here.</li>
 <li><code>apps</code> - Standalone Applications and daemons.</li>
 <li><code>integration-mc&lt;version&gt;</code> - Basically, a Minecraft mod</li>
-<li><code>logcollector</code> - our Rust log collector.</li>
 </ul>
 <h2 id="log-collection-server">Log collection server</h2>
 <p>For Eln2 pre-alpha development, we will have a crash log handler. What will happen is if the game crashes, we will automatically take the log, and send it out to the development team to a server that can receive these logs and then we can process them.</p>
 <p>This will aid in development, and will likely be removed at the alpha stage unless we find it useful. At the pre-alpha stage, we will also send the UUID of players so that we know who had the bug.</p>
 <h2 id="phases">Phases</h2>
-<p>Just a FYI, these will all be copied sooner or later to GitHub ~~issues~~ Kanban boards, so that it's easier to track progress. There will be a proper set of milestones for this on each of the relevant repositories.</p>
+<p>Just a FYI, these will all be copied sooner or later to GitHub Kanban boards, so that it's easier to track progress. There will be a proper set of milestones for this on each of the relevant repositories.</p>
 <h2 id="phase-1-modding-integration-done">Phase 1: Modding Integration [DONE]</h2>
 <p>Core:</p>
 <ul>
@@ -174,129 +173,115 @@
 <p>I say models and textures, but these are basic as almost all of these items will be removed/edited later.</p>
 <ul>
 <li>
-<p>[ ] Sim API</p>
+<p>[ ] Basic Sim API (not mod-integration ready necessarily)</p>
 </li>
 <li>
 <p>[ ] SingleCable: a current based uninsulated cable that connects similarly to RF pipes</p>
+</li>
+<li>[ ] SingleSource: a simple voltage source block</li>
+<li>[ ] SingleGround: a simple ground pin</li>
+<li>[ ] CreativeHeater: a simple thermal cable heater</li>
+<li>[ ] Heatsink: a simple heatsink with no fan</li>
+<li>[ ] Heatsink with a fan: a simple heatsink with a fan (12v, 24W)</li>
+<li>[ ] SingleSwitch: a current based uninsulated throw switch</li>
+<li>[ ] SingleResistor: a basic capacitor</li>
+<li>[ ] SingleCapacitor: a simple capacitor</li>
+<li>[ ] SingleInductor: a simple inductor</li>
+<li>
+<p>[ ] Basic 12v Battery</p>
+</li>
+<li>
+<p>[ ] Shaft Networks:</p>
 <ul>
-<li>[ ] Electrical Sim</li>
-<li>[ ] Thermal Sim</li>
-</ul>
-</li>
-<li>[ ] SingleSource: a simple voltage source block<ul>
-<li>[ ] Electrical Sim</li>
-</ul>
-</li>
-<li>[ ] SingleGround: a simple ground pin<ul>
-<li>[ ] Electrical Sim</li>
-</ul>
-</li>
-<li>[ ] CreativeHeater: a simple thermal cable heater<ul>
-<li>[ ] Thermal Sim (creates heat at a predefined rate of energy)</li>
-<li>[ ] Inventory Texture</li>
-<li>[ ] Model</li>
-</ul>
-</li>
-<li>[ ] Passive Cooler: a simple heatsink with no fan<ul>
-<li>[ ] Thermal Sim</li>
-<li>[ ] Inventory Texture</li>
-<li>[ ] Model (use existing 1.7.10?)</li>
-</ul>
-</li>
-<li>[ ] Active Cooler: an simple heatsink with a fan (12v, 24W)<ul>
-<li>[ ] Electrical Sim</li>
-<li>[ ] Thermal Sim</li>
-<li>[ ] Inventory Texture</li>
-<li>[ ] Model (use existing 1.7.10?)</li>
-</ul>
-</li>
-<li>[ ] SingleSwitch: a current based uninsulated throw switch<ul>
-<li>[ ] Electrical Sim</li>
-<li>[ ] Thermal Sim (similar to a cable, except when open we may reduce the thermal transfer)</li>
-</ul>
-</li>
-<li>[ ] SingleResistor: a basic capacitor<ul>
-<li>[ ] Electrical Sim</li>
-<li>[ ] Thermal Sim</li>
-</ul>
-</li>
-<li>[ ] SingleCapacitor: a simple capacitor<ul>
-<li>[ ] Electrical Sim</li>
-<li>[ ] Thermal Sim?</li>
-</ul>
-</li>
-<li>[ ] SingleInductor: a simple inductor<ul>
-<li>[ ] Electrical Sim</li>
-<li>[ ] Thermal Sim?</li>
-</ul>
-</li>
-<li>[ ] Basic 12v Battery<ul>
-<li>[ ] Electrical Sim</li>
-<li>[ ] Thermal Sim</li>
-<li>[ ] Inventory Texture</li>
-<li>[ ] Model (use existing 1.7.10?)</li>
+<li>[ ] generator</li>
+<li>[ ] motor</li>
+<li>[ ] turbines</li>
+<li>[ ] clutch</li>
+<li>[ ] static shaft</li>
 </ul>
 </li>
 </ul>
 <p>NOTE: Models are not a priority at this stage as most of the Single* items will be removed later.</p>
 <p>Log Server:</p>
 <ul>
-<li>[ ] Centralized log collection server</li>
-<li>[ ] config file disclaimer option (disables the mod unless the user agrees to not pester the devs before alpha)</li>
-<li>[ ] crash logger</li>
+<li>[ ] Centralized log collection server (might be postponed)</li>
+<li>[ ] config file disclaimer option (disables the mod in un-obfuscated contexts, unless the user agrees to not pester the devs before 1.0)</li>
+<li>[ ] crash logger code (catch Minecraft crashes?)</li>
 </ul>
 <h2 id="phase-3-multinode">Phase 3: MultiNode</h2>
 <ul>
 <li>[ ] solar panels</li>
 <li>[ ] wind turbines</li>
+<li>[ ] autominer</li>
 </ul>
-<h2 id="phase-4-sixnode">Phase 4: SixNode</h2>
+<h2 id="phase-4-sixnode-tiny-node-if-fmb">Phase 4: SixNode (Tiny Node if FMB?)</h2>
 <ul>
 <li>[ ] "New" SixNode<ul>
 <li>[ ] cables</li>
 <li>[ ] switches</li>
 <li>[ ] resistors</li>
-<li>[ ] inductors</li>
-<li>[ ] capacitors</li>
+<li>[ ] inductor</li>
+<li>[ ] capacitor</li>
 <li>[ ] lamp sockets</li>
 <li>[ ] lamp supply</li>
 </ul>
 </li>
 <li>[ ] Remove Single* or at least de-list it (shadow registry)</li>
-<li>[ ] API v1.0</li>
-<li>[ ] Some reasonable textures</li>
 </ul>
 <h2 id="phase-5-alpha-release-and-debugging">Phase 5: Alpha Release and debugging</h2>
 <ul>
 <li>[ ] remove developer disclaimer config</li>
 <li>[ ] Initial rounds of bug fixing</li>
+<li>[ ] Some reasonable textures</li>
+<li>[ ] API v1.0 Stabilization (for mod compatibility)</li>
 </ul>
 <h2 id="phase-6-machines-and-equipment">Phase 6: Machines and equipment</h2>
 <p>In no particular order:</p>
 <ul>
 <li>[ ] mod integration<ul>
-<li>[ ] pay back IR folks by making electric trains a bit more electric<ul>
-<li>[ ] cantenaries (over track wires)</li>
-</ul>
-</li>
-<li>[ ] oredict</li>
+<li>[ ] oredict (items, fluids, gasses)</li>
 </ul>
 </li>
 <li>[ ] Machines<ul>
-<li>[ ] crusher - 100v to 800v</li>
-<li>[ ] roller - 100v to 800v</li>
-<li>[ ] press - 100v to 400v</li>
-<li>[ ] air compressor - 12v to 400v</li>
-<li>[ ] saw  - 12v to 200v</li>
+<li>[ ] crusher</li>
+<li>[ ] air compressor</li>
 <li>[ ] experimental teleporter</li>
 </ul>
 </li>
-<li>[ ] Pole update material:<ul>
-<li>[ ] data cables, fiber (Sigbus, OC/CC)<ul>
+<li>[ ] Woodworking<ul>
+<li>[ ] saw</li>
+</ul>
+</li>
+<li>
+<p>[ ] Metalworking</p>
+<ul>
+<li>[ ] lathe (electric, shaft)</li>
+<li>[ ] mill (electric, shaft)</li>
+<li>[ ] drill press (electric, shaft)</li>
+<li>[ ] shaper (electric, shaft)</li>
+<li>[ ] press break (manual, electric, shaft)</li>
+<li>[ ] english wheel (electric, shaft)</li>
+<li>[ ] oxy-acetylene torch (gas)</li>
+<li>[ ] hot riveting machine (electric, shaft)</li>
+<li>[ ] electric welder (electric)</li>
+</ul>
+</li>
+<li>
+<p>[ ] Industrial Metwalworking</p>
+<ul>
+<li>[ ] rolling machine (electric, shaft)</li>
+<li>[ ] forge hammer (electric, shaft)</li>
+<li>[ ] forge heater (thermal)</li>
+</ul>
+</li>
+<li>
+<p>[ ] Pole update material:</p>
+<ul>
+<li>[ ] data cables, fiber (Sigbus, OC)<ul>
 <li>[ ] fiber box</li>
 </ul>
 </li>
-<li>[ ] 200v, 480v? (lower wires)</li>
+<li>[ ] 200v, 480v (lower wires)</li>
 <li>[ ] 16kV (standard height poles)</li>
 <li>[ ] 125kV power transmission (extra height poles and power transmission)</li>
 <li>[ ] 220kV power transmission (power transfer towers)</li>
@@ -314,21 +299,6 @@
 </li>
 </ul>
 </li>
-<li>[ ] Shaft Networks:<ul>
-<li>[ ] generator</li>
-<li>[ ] motor</li>
-<li>[ ] turbines</li>
-<li>[ ] clutch</li>
-<li>[ ] static shaft</li>
-<li>[ ] shaft machines<ul>
-<li>[ ] crusher</li>
-<li>[ ] roller</li>
-<li>[ ] saw</li>
-<li>[ ] air compressor</li>
-</ul>
-</li>
-</ul>
-</li>
 <li>[ ] Steam and Oil Processing<ul>
 <li>[ ] Oil fields</li>
 <li>[ ] Oil rigs (factorio-esque with diminishing returns)</li>
@@ -337,16 +307,9 @@
 <li>[ ] Solar Tower (generates steam from heat)</li>
 <li>[ ] <em>Nuclear Reactor</em> (generates hot coolant)<ul>
 <li>[ ] Liquid Heat Exchangers (uses hot coolant and water to make steam and cold coolant)</li>
-</ul>
-</li>
-<li>[ ] More efficient gas turbine operationv (~60% return in lost heat energy)<ul>
 <li>[ ]Gas Heat Exchangers - uses exhaust from gas turbines to heat water to make steam</li>
 </ul>
 </li>
-</ul>
-</li>
-<li>[ ] Ore Processing<ul>
-<li>[ ] Some kind of <em>something</em></li>
 </ul>
 </li>
 </ul></div>
