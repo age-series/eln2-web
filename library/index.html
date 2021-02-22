@@ -4,26 +4,26 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="None">
         
         
-        <link rel="shortcut icon" href="img/favicon.ico">
-        <title>eln2.org</title>
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/font-awesome.min.css" rel="stylesheet">
-        <link href="css/base.css" rel="stylesheet">
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Library - eln2.org</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/color-brewer.min.css">
 
-        <script src="js/jquery-1.10.2.min.js" defer></script>
-        <script src="js/bootstrap.min.js" defer></script>
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
 
-    <body class="homepage">
+    <body>
         <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
-                <a class="navbar-brand" href=".">eln2.org</a>
+                <a class="navbar-brand" href="..">eln2.org</a>
                 <!-- Expander button -->
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
                     <span class="navbar-toggler-icon"></span>
@@ -33,17 +33,17 @@
                 <div id="navbar-collapse" class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../development/" class="nav-link">Eln2 Developer Plans</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../progress/" class="nav-link">Eln2 Progress</a>
+                            </li>
                             <li class="navitem active">
-                                <a href="." class="nav-link">Home</a>
-                            </li>
-                            <li class="navitem">
-                                <a href="development/" class="nav-link">Eln2 Developer Plans</a>
-                            </li>
-                            <li class="navitem">
-                                <a href="progress/" class="nav-link">Eln2 Progress</a>
-                            </li>
-                            <li class="navitem">
-                                <a href="library/" class="nav-link">Library</a>
+                                <a href="./" class="nav-link">Library</a>
                             </li>
                             <li class="navitem">
                                 <a href="https://electrical-age.net" class="nav-link">Electrical Age Website</a>
@@ -60,17 +60,17 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" class="nav-link disabled">
+                                <a rel="prev" href="../progress/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="development/" class="nav-link">
+                                <a rel="next" class="nav-link disabled">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="https://github.com/eln2/eln2-web/edit/master/docs/index.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
+                                <a href="https://github.com/eln2/eln2-web/edit/master/docs/library.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
                             </li>
                     </ul>
                 </div>
@@ -90,8 +90,24 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#welcome-to-eln2org" class="nav-link">Welcome to eln2.org</a>
+            <li class="nav-item" data-level="1"><a href="#library" class="nav-link">library</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#mnaspice-resources" class="nav-link">MNA/SPICE Resources</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#real-life-electrical-grid-data" class="nav-link">Real life electrical grid data</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#signal-processing" class="nav-link">Signal Processing</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#minecraft-coding" class="nav-link">Minecraft Coding</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -99,10 +115,56 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="welcome-to-eln2org">Welcome to eln2.org</h1>
-<p>Electrical Age 2.0, aka Eln2, is a new version of Electrical Age which is to be written for <a href="https://minecraft.net">Minecraft</a> 1.16+.</p>
-<p>Plans are for the mod to be at least to a playable Alpha state by Fall of 2021, with the work perhaps nearing completion by the end of 2022. These are rough guesses and are honestly pretty optimistic at best.</p>
-<p>For more information about development plans, please visit the <a href="https://github.com/eln2">eln2 organization on GitHub</a>.</p></div>
+<h1 id="library">library</h1>
+<p>Here, you can find various resources related to the mod that might be useful...</p>
+<h2 id="mnaspice-resources">MNA/SPICE Resources</h2>
+<ul>
+<li>https://lpsa.swarthmore.edu/Systems/Electrical/mna/MNA1.html<ul>
+<li>Fantastic set of pages documenting how to do MNA. Sample Matlab code provided.</li>
+</ul>
+</li>
+<li>http://qucs.sourceforge.net/tech/node14.html<ul>
+<li>Another step-by-step resource for MNA</li>
+</ul>
+</li>
+<li>https://en.wikipedia.org/wiki/Two-port_network<ul>
+<li>Important concepts for working on "fixing" some issues with "InterSystem"</li>
+</ul>
+</li>
+<li>https://www.analog.com/en/design-center/simulation-models/spice-models.html<ul>
+<li>Some sample SPICE circuits. Might want to add compatibility later.</li>
+</ul>
+</li>
+</ul>
+<h2 id="real-life-electrical-grid-data">Real life electrical grid data</h2>
+<ul>
+<li>https://www.swissgrid.ch/en/home.html<ul>
+<li>A cool thing that shows the electric grid in Switzerland!</li>
+</ul>
+</li>
+<li>https://www.eirgridgroup.com/the-grid/<ul>
+<li>Ireland electric grid. Map on the website updated Jan 2020.</li>
+</ul>
+</li>
+<li>http://smartgriddashboard.eirgrid.com/<ul>
+<li>Ireland Smart Grid Dashboard</li>
+</ul>
+</li>
+</ul>
+<h2 id="signal-processing">Signal Processing</h2>
+<ul>
+<li>https://en.wikipedia.org/wiki/Kalman_filter<ul>
+<li>It looks like math.</li>
+</ul>
+</li>
+</ul>
+<h2 id="minecraft-coding">Minecraft Coding</h2>
+<ul>
+<li>https://github.com/TheGreyGhost/MinecraftByExample<ul>
+<li>Templates for different Minecraft primitives.</li>
+</ul>
+</li>
+</ul></div>
             </div>
         </div>
 
@@ -111,11 +173,11 @@
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script>
-            var base_url = ".",
+            var base_url = "..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="js/base.js" defer></script>
-        <script src="search/main.js" defer></script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
@@ -183,8 +245,3 @@
 
     </body>
 </html>
-
-<!--
-MkDocs version : 1.1.2
-Build Date UTC : 2021-02-22 05:41:20.999996+00:00
--->
