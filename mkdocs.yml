@@ -3,6 +3,7 @@ nav:
   - Home: index.md
   - Eln2 Developer Plans: development.md
   - Eln2 Progress: progress.md
+  - Library: library.md
   - Electrical Age Website: https://electrical-age.net
   - Electrical Age Wiki: https://wiki.electrical-age.net
 theme: lumen
