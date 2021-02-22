@@ -5,6 +5,15 @@ General progress information about Eln2 development can be found here.
 
 # 2021
 
+## Week 8 (Feb 21 - Feb 27)
+
+* `jrddunbr` updated the website by moving the very low traffic #design-plans and #library channels from the Discord to the GitHub issue tracker/Kanban board, and library to [library](library.md).
+* `jrddunbr` and `Caeleron` spent much of Sunday working on various ways to do component testing that can be used to test circuits in the simulator, but also able to be built by our players if they want. We determined that while my 1GS/s oscilloscope is very nice, we determined that using an Arduino would be better, because the oscilloscope has the following shortfalls:
+    1. Too expensive and obscure for most players to own
+    2. Not accurate enough in the voltages it can detect
+    3. Difficult to use and set up the measuring functionality
+    4. Collects literally 100's of megabytes of data that crashes Excel
+
 ## Week 7 (Feb 14 - 20)
 
 The current core devteam is `jrddunbr` and `Caeleron`
