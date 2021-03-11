@@ -1,43 +1,4 @@
-# Eln 2 development
-
-Some tidbits about development.
-
-## Licensing
-
-Eln2 is licensed under the MIT license.
-
-Models and artwork need to be under some creative commons license that allows modification and distribution *with* commercial use, [such as this license](https://creativecommons.org/licenses/by-sa/4.0/).
-
-## Languages
-
-#### Kotlin:
-* Eln2
-* Apps
-* Minecraft Integration
-
-#### Google Protobuffs:
-* Network sockets 
-* Shared memory
-
-#### Rust:
-* Log collector
-* Optimized Sim code? (later date)
-
-#### C#:
-* Vintage Story
-
-#### Markdown:
-* https://eln2.org, compiled with MkDocs
-* Most documentation
-
-## Project Structure
-
-Inside the `eln2` repository, you will find multiple folders:
-
-  * `core` - All of the core MNA, thermal, and shaft based simulation code. No Minecraft or VS code ends up here.
-  * `apps` - Standalone Applications and daemons.
-  * `integration-mc<version>` - Basically, a Minecraft mod
-  * `proto` - protocol buffers for the network serialization code
+# Eln 2 agenda
 
 ## Phases
 
@@ -117,13 +78,18 @@ Theoretically, this fixes our issues with InterSystem from the 1.7.10 version of
 
 ## Phase 5: Alpha Release and debugging
 
-- [ ] remove developer disclaimer config
 - [ ] Initial rounds of bug fixing
 - [ ] Some reasonable textures
 - [ ] API v1.0 Stabilization (for mod compatibility)
 - [ ] Documentation subsystem using [Patchouli](https://www.curseforge.com/minecraft/mc-mods/patchouli)
     - [ ] Write a converter to make this also presented on the website.
 - [ ] PDF "Datasheets" for components, akin to the ones in [Shenzhen I/O](https://usermanual.wiki/Document/SHENZHENIOManual.736522646/view)
+- [ ] Mod translation code
+
+When done:
+
+- [ ] remove developer disclaimer config
+- [ ] Release 2.0
 
 ## Phase 6: Machines and equipment
 
