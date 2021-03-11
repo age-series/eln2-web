@@ -104,19 +104,19 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#log-collection-server" class="nav-link">Log collection server</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
             <li class="nav-item" data-level="2"><a href="#phases" class="nav-link">Phases</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#phase-1-modding-integration-done" class="nav-link">Phase 1: Modding Integration [DONE]</a>
+            <li class="nav-item" data-level="2"><a href="#phase-1-mna-code-done" class="nav-link">Phase 1: MNA Code [DONE]</a>
               <ul class="nav flex-column">
               </ul>
             </li>
             <li class="nav-item" data-level="2"><a href="#phase-2-singlenode-in-progress" class="nav-link">Phase 2: SingleNode [IN PROGRESS]</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#phase-25-sim-revisit" class="nav-link">Phase 2.5: Sim Revisit</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -149,167 +149,204 @@
 <p>Eln2 is licensed under the MIT license.</p>
 <p>Models and artwork need to be under some creative commons license that allows modification and distribution <em>with</em> commercial use, <a href="https://creativecommons.org/licenses/by-sa/4.0/">such as this license</a>.</p>
 <h2 id="languages">Languages</h2>
-<p>Eln2 Core, Apps, and Minecraft Integration is going to be written in Kotlin. Network sockets and shared memory will use Google Protobuffs, and Vintage Story will use C#. The log server uses Rust.</p>
-<h2 id="project-structure">Project Structure</h2>
-<p>There are two repositories:</p>
+<h4 id="kotlin">Kotlin:</h4>
 <ul>
-<li><a href="https://github.com/eln2/eln2">eln2</a>: This is all of the Eln2 code.</li>
-<li><a href="https://github.com/eln2/eln2-web">eln2-web</a>: This is the website you are reading.</li>
+<li>Eln2</li>
+<li>Apps</li>
+<li>Minecraft Integration</li>
 </ul>
+<h4 id="google-protobuffs">Google Protobuffs:</h4>
+<ul>
+<li>Network sockets </li>
+<li>Shared memory</li>
+</ul>
+<h4 id="rust">Rust:</h4>
+<ul>
+<li>Log collector</li>
+<li>Optimized Sim code? (later date)</li>
+</ul>
+<h4 id="c">C#:</h4>
+<ul>
+<li>Vintage Story</li>
+</ul>
+<h4 id="markdown">Markdown:</h4>
+<ul>
+<li>https://eln2.org, compiled with MkDocs</li>
+<li>Most documentation</li>
+</ul>
+<h2 id="project-structure">Project Structure</h2>
 <p>Inside the <code>eln2</code> repository, you will find multiple folders:</p>
 <ul>
 <li><code>core</code> - All of the core MNA, thermal, and shaft based simulation code. No Minecraft or VS code ends up here.</li>
 <li><code>apps</code> - Standalone Applications and daemons.</li>
 <li><code>integration-mc&lt;version&gt;</code> - Basically, a Minecraft mod</li>
+<li><code>proto</code> - protocol buffers for the network serialization code</li>
 </ul>
-<h2 id="log-collection-server">Log collection server</h2>
-<p>For Eln2 pre-alpha development, we will have a crash log handler. What will happen is if the game crashes, we will automatically take the log, and send it out to the development team to a server that can receive these logs and then we can process them.</p>
-<p>This will aid in development, and will likely be removed at the alpha stage unless we find it useful. At the pre-alpha stage, we will also send the UUID of players so that we know who had the bug.</p>
 <h2 id="phases">Phases</h2>
-<p>Just a FYI, these will all be copied sooner or later to GitHub Kanban boards, so that it's easier to track progress. There will be a proper set of milestones for this on each of the relevant repositories.</p>
-<h2 id="phase-1-modding-integration-done">Phase 1: Modding Integration [DONE]</h2>
+<p>These are better expressed in the Kanban boards on GitHub.</p>
+<p>[ <a href="https://github.com/orgs/eln2/projects/1">General Development Board</a> ]</p>
+<p>[ <a href="https://github.com/orgs/eln2/projects/6">MNA</a> ]
+[ <a href="https://github.com/orgs/eln2/projects/5">Sim</a> ]
+[ <a href="https://github.com/orgs/eln2/projects/4">Blocks</a> ]
+[ <a href="https://github.com/orgs/eln2/projects/3">Items</a> ]</p>
+<h2 id="phase-1-mna-code-done">Phase 1: MNA Code [DONE]</h2>
 <p>Core:</p>
-<ul>
-<li>[x] MNA finished</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled checked/> MNA finished</li>
 </ul>
 <h2 id="phase-2-singlenode-in-progress">Phase 2: SingleNode [IN PROGRESS]</h2>
-<p>I say models and textures, but these are basic as almost all of these items will be removed/edited later.</p>
-<ul>
-<li>
-<p>[ ] Basic Sim API (not mod-integration ready necessarily)</p>
+<p>Kanban board: <a href="https://github.com/orgs/eln2/projects/2">Phase 2 Projects</a></p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" disabled/> config file disclaimer option (disables the mod in un-obfuscated contexts, unless the user agrees to not pester the devs before 1.0)</p>
 </li>
-<li>
-<p>[ ] SingleCable: a current based uninsulated cable that connects similarly to RF pipes</p>
+<li class="task-list-item">
+<p><input type="checkbox" disabled/> Basic Sim API (not mod-integration ready necessarily)</p>
 </li>
-<li>[ ] SingleSource: a simple voltage source block</li>
-<li>[ ] SingleGround: a simple ground pin</li>
-<li>[ ] CreativeHeater: a simple thermal cable heater</li>
-<li>[ ] Heatsink: a simple heatsink with no fan</li>
-<li>[ ] Heatsink with a fan: a simple heatsink with a fan (12v, 24W)</li>
-<li>[ ] SingleSwitch: a current based uninsulated throw switch</li>
-<li>[ ] SingleResistor: a basic capacitor</li>
-<li>[ ] SingleCapacitor: a simple capacitor</li>
-<li>[ ] SingleInductor: a simple inductor</li>
-<li>
-<p>[ ] Basic 12v Battery</p>
+<li class="task-list-item">
+<p><input type="checkbox" disabled/> Thermal Networks:</p>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> CreativeHeater: a simple thermal cable heater</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Heatsink: a simple heatsink with no fan</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Heatsink with a fan: a simple heatsink with a fan (12v, 24W)</li>
+</ul>
 </li>
-<li>
-<p>[ ] Shaft Networks:</p>
-<ul>
-<li>[ ] generator</li>
-<li>[ ] motor</li>
-<li>[ ] turbines</li>
-<li>[ ] clutch</li>
-<li>[ ] static shaft</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled/> Shaft Networks:</p>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> generator</li>
+<li class="task-list-item"><input type="checkbox" disabled/> motor</li>
+<li class="task-list-item"><input type="checkbox" disabled/> turbines</li>
+<li class="task-list-item"><input type="checkbox" disabled/> clutch</li>
+<li class="task-list-item"><input type="checkbox" disabled/> static shaft</li>
+</ul>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled/> Electrical Networks (with Thermal System)</p>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> SingleCable: a current based uninsulated cable that connects similarly to RF pipes</li>
+<li class="task-list-item"><input type="checkbox" disabled/> SingleSource: a simple voltage source block</li>
+<li class="task-list-item"><input type="checkbox" disabled/> SingleGround: a simple ground pin</li>
+<li class="task-list-item"><input type="checkbox" disabled/> SingleSwitch: a current based uninsulated throw switch</li>
+<li class="task-list-item"><input type="checkbox" disabled/> SingleResistor: a basic capacitor</li>
+<li class="task-list-item"><input type="checkbox" disabled/> SingleCapacitor: a simple capacitor</li>
+<li class="task-list-item"><input type="checkbox" disabled/> SingleInductor: a simple inductor</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Basic 12v Battery</li>
 </ul>
 </li>
 </ul>
 <p>NOTE: Models are not a priority at this stage as most of the Single* items will be removed later.</p>
-<p>Log Server:</p>
-<ul>
-<li>[ ] Centralized log collection server (might be postponed)</li>
-<li>[ ] config file disclaimer option (disables the mod in un-obfuscated contexts, unless the user agrees to not pester the devs before 1.0)</li>
-<li>[ ] crash logger code (catch Minecraft crashes?)</li>
-</ul>
+<h2 id="phase-25-sim-revisit">Phase 2.5: Sim Revisit</h2>
+<p>Cameron wants to revisit the Electrical Simulator code after we finish Node.</p>
+<p>If you want a good read, you shoud find a book about non-linear dynamic circuit systems.</p>
+<p>Theoretically, this fixes our issues with InterSystem from the 1.7.10 version of Electrical Age.</p>
 <h2 id="phase-3-multinode">Phase 3: MultiNode</h2>
-<ul>
-<li>[ ] solar panels</li>
-<li>[ ] wind turbines</li>
-<li>[ ] autominer</li>
-</ul>
-<h2 id="phase-4-sixnode-tiny-node-if-fmb">Phase 4: SixNode (Tiny Node if FMB?)</h2>
-<ul>
-<li>[ ] "New" SixNode<ul>
-<li>[ ] cables</li>
-<li>[ ] switches</li>
-<li>[ ] resistors</li>
-<li>[ ] inductor</li>
-<li>[ ] capacitor</li>
-<li>[ ] lamp sockets</li>
-<li>[ ] lamp supply</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> Ghost Node implementation<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> solar panels</li>
+<li class="task-list-item"><input type="checkbox" disabled/> wind turbines</li>
+<li class="task-list-item"><input type="checkbox" disabled/> autominer</li>
 </ul>
 </li>
-<li>[ ] Remove Single* or at least de-list it (shadow registry)</li>
+</ul>
+<h2 id="phase-4-sixnode-tiny-node-if-fmb">Phase 4: SixNode (Tiny Node if FMB?)</h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> "New" SixNode<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> cables</li>
+<li class="task-list-item"><input type="checkbox" disabled/> switches</li>
+<li class="task-list-item"><input type="checkbox" disabled/> resistors</li>
+<li class="task-list-item"><input type="checkbox" disabled/> inductor</li>
+<li class="task-list-item"><input type="checkbox" disabled/> capacitor</li>
+<li class="task-list-item"><input type="checkbox" disabled/> lamp sockets</li>
+<li class="task-list-item"><input type="checkbox" disabled/> lamp supply</li>
+</ul>
+</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Remove Single* or at least de-list it (shadow registry)</li>
 </ul>
 <h2 id="phase-5-alpha-release-and-debugging">Phase 5: Alpha Release and debugging</h2>
-<ul>
-<li>[ ] remove developer disclaimer config</li>
-<li>[ ] Initial rounds of bug fixing</li>
-<li>[ ] Some reasonable textures</li>
-<li>[ ] API v1.0 Stabilization (for mod compatibility)</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> remove developer disclaimer config</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Initial rounds of bug fixing</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Some reasonable textures</li>
+<li class="task-list-item"><input type="checkbox" disabled/> API v1.0 Stabilization (for mod compatibility)</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Documentation subsystem using <a href="https://www.curseforge.com/minecraft/mc-mods/patchouli">Patchouli</a><ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> Write a converter to make this also presented on the website.</li>
+</ul>
+</li>
+<li class="task-list-item"><input type="checkbox" disabled/> PDF "Datasheets" for components, akin to the ones in <a href="https://usermanual.wiki/Document/SHENZHENIOManual.736522646/view">Shenzhen I/O</a></li>
 </ul>
 <h2 id="phase-6-machines-and-equipment">Phase 6: Machines and equipment</h2>
 <p>In no particular order:</p>
-<ul>
-<li>[ ] mod integration<ul>
-<li>[ ] oredict (items, fluids, gasses)</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> mod integration<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> oredict (items, fluids, gasses)</li>
 </ul>
 </li>
-<li>[ ] Machines<ul>
-<li>[ ] crusher</li>
-<li>[ ] air compressor</li>
-<li>[ ] experimental teleporter</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Machines<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> crusher</li>
+<li class="task-list-item"><input type="checkbox" disabled/> air compressor</li>
+<li class="task-list-item"><input type="checkbox" disabled/> experimental teleporter</li>
 </ul>
 </li>
-<li>[ ] Woodworking<ul>
-<li>[ ] saw</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Woodworking<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> saw</li>
 </ul>
 </li>
-<li>
-<p>[ ] Metalworking</p>
-<ul>
-<li>[ ] lathe (electric, shaft)</li>
-<li>[ ] mill (electric, shaft)</li>
-<li>[ ] drill press (electric, shaft)</li>
-<li>[ ] shaper (electric, shaft)</li>
-<li>[ ] press break (manual, electric, shaft)</li>
-<li>[ ] english wheel (electric, shaft)</li>
-<li>[ ] oxy-acetylene torch (gas)</li>
-<li>[ ] hot riveting machine (electric, shaft)</li>
-<li>[ ] electric welder (electric)</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled/> Metalworking</p>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> lathe (electric, shaft)</li>
+<li class="task-list-item"><input type="checkbox" disabled/> mill (electric, shaft)</li>
+<li class="task-list-item"><input type="checkbox" disabled/> drill press (electric, shaft)</li>
+<li class="task-list-item"><input type="checkbox" disabled/> shaper (electric, shaft)</li>
+<li class="task-list-item"><input type="checkbox" disabled/> press break (manual, electric, shaft)</li>
+<li class="task-list-item"><input type="checkbox" disabled/> english wheel (electric, shaft)</li>
+<li class="task-list-item"><input type="checkbox" disabled/> oxy-acetylene torch (gas)</li>
+<li class="task-list-item"><input type="checkbox" disabled/> hot riveting machine (electric, shaft)</li>
+<li class="task-list-item"><input type="checkbox" disabled/> electric welder (electric)</li>
 </ul>
 </li>
-<li>
-<p>[ ] Industrial Metwalworking</p>
-<ul>
-<li>[ ] rolling machine (electric, shaft)</li>
-<li>[ ] forge hammer (electric, shaft)</li>
-<li>[ ] forge heater (thermal)</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled/> Industrial Metwalworking</p>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> rolling machine (electric, shaft)</li>
+<li class="task-list-item"><input type="checkbox" disabled/> forge hammer (electric, shaft)</li>
+<li class="task-list-item"><input type="checkbox" disabled/> forge heater (thermal)</li>
 </ul>
 </li>
-<li>
-<p>[ ] Pole update material:</p>
-<ul>
-<li>[ ] data cables, fiber (Sigbus, OC)<ul>
-<li>[ ] fiber box</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled/> Pole update material:</p>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> data cables, fiber (Sigbus, OC)<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> fiber box</li>
 </ul>
 </li>
-<li>[ ] 200v, 480v (lower wires)</li>
-<li>[ ] 16kV (standard height poles)</li>
-<li>[ ] 125kV power transmission (extra height poles and power transmission)</li>
-<li>[ ] 220kV power transmission (power transfer towers)</li>
+<li class="task-list-item"><input type="checkbox" disabled/> 200v, 480v (lower wires)</li>
+<li class="task-list-item"><input type="checkbox" disabled/> 16kV (standard height poles)</li>
+<li class="task-list-item"><input type="checkbox" disabled/> 125kV power transmission (extra height poles and power transmission)</li>
+<li class="task-list-item"><input type="checkbox" disabled/> 220kV power transmission (power transfer towers)</li>
 </ul>
 </li>
-<li>[ ] Underground cable transmission<ul>
-<li>[ ] manholes</li>
-<li>[ ] underground fiber<ul>
-<li>[ ] fiber box</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Underground cable transmission<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> manholes</li>
+<li class="task-list-item"><input type="checkbox" disabled/> underground fiber<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> fiber box</li>
 </ul>
 </li>
-<li>[ ] &lt;2kV cables/sigbus<ul>
-<li>[ ] Ground transformer</li>
+<li class="task-list-item"><input type="checkbox" disabled/> &lt;2kV cables/sigbus<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> Ground transformer</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>[ ] Steam and Oil Processing<ul>
-<li>[ ] Oil fields</li>
-<li>[ ] Oil rigs (factorio-esque with diminishing returns)</li>
-<li>[ ] Oil Processing Tanks</li>
-<li>[ ] Biofuel Processing</li>
-<li>[ ] Solar Tower (generates steam from heat)</li>
-<li>[ ] <em>Nuclear Reactor</em> (generates hot coolant)<ul>
-<li>[ ] Liquid Heat Exchangers (uses hot coolant and water to make steam and cold coolant)</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Steam and Oil Processing<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> Oil fields</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Oil rigs (factorio-esque with diminishing returns)</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Oil Processing Tanks</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Biofuel Processing</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Solar Tower (generates steam from heat)</li>
+<li class="task-list-item"><input type="checkbox" disabled/> <em>Nuclear Reactor</em> (generates hot coolant)<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> Liquid Heat Exchangers (uses hot coolant and water to make steam and cold coolant)</li>
 <li>[ ]Gas Heat Exchangers - uses exhaust from gas turbines to heat water to make steam</li>
 </ul>
 </li>
