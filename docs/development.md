@@ -10,32 +10,47 @@ Models and artwork need to be under some creative commons license that allows mo
 
 ## Languages
 
-Eln2 Core, Apps, and Minecraft Integration is going to be written in Kotlin. Network sockets and shared memory will use Google Protobuffs, and Vintage Story will use C#. The log server uses Rust.
+#### Kotlin:
+* Eln2
+* Apps
+* Minecraft Integration
+
+#### Google Protobuffs:
+* Network sockets 
+* Shared memory
+
+#### Rust:
+* Log collector
+* Optimized Sim code? (later date)
+
+#### C#:
+* Vintage Story
+
+#### Markdown:
+* https://eln2.org, compiled with MkDocs
+* Most documentation
 
 ## Project Structure
-
-There are two repositories:
-
-  * [eln2](https://github.com/eln2/eln2): This is all of the Eln2 code.
-  * [eln2-web](https://github.com/eln2/eln2-web): This is the website you are reading.
 
 Inside the `eln2` repository, you will find multiple folders:
 
   * `core` - All of the core MNA, thermal, and shaft based simulation code. No Minecraft or VS code ends up here.
   * `apps` - Standalone Applications and daemons.
   * `integration-mc<version>` - Basically, a Minecraft mod
-
-## Log collection server
-
-For Eln2 pre-alpha development, we will have a crash log handler. What will happen is if the game crashes, we will automatically take the log, and send it out to the development team to a server that can receive these logs and then we can process them.
-
-This will aid in development, and will likely be removed at the alpha stage unless we find it useful. At the pre-alpha stage, we will also send the UUID of players so that we know who had the bug.
+  * `proto` - protocol buffers for the network serialization code
 
 ## Phases
 
-Just a FYI, these will all be copied sooner or later to GitHub Kanban boards, so that it's easier to track progress. There will be a proper set of milestones for this on each of the relevant repositories.
+These are better expressed in the Kanban boards on GitHub.
 
-## Phase 1: Modding Integration [DONE]
+[ [General Development Board](https://github.com/orgs/eln2/projects/1) ]
+
+[ [MNA](https://github.com/orgs/eln2/projects/6) ]
+[ [Sim](https://github.com/orgs/eln2/projects/5) ]
+[ [Blocks](https://github.com/orgs/eln2/projects/4) ]
+[ [Items](https://github.com/orgs/eln2/projects/3) ]
+
+## Phase 1: MNA Code [DONE]
 
 Core:
 
@@ -43,21 +58,16 @@ Core:
 
 ## Phase 2: SingleNode [IN PROGRESS]
 
-I say models and textures, but these are basic as almost all of these items will be removed/edited later.
+Kanban board: [Phase 2 Projects](https://github.com/orgs/eln2/projects/2)
+
+- [ ] config file disclaimer option (disables the mod in un-obfuscated contexts, unless the user agrees to not pester the devs before 1.0)
 
 - [ ] Basic Sim API (not mod-integration ready necessarily)
 
-- [ ] SingleCable: a current based uninsulated cable that connects similarly to RF pipes
-- [ ] SingleSource: a simple voltage source block
-- [ ] SingleGround: a simple ground pin
-- [ ] CreativeHeater: a simple thermal cable heater
-- [ ] Heatsink: a simple heatsink with no fan
-- [ ] Heatsink with a fan: a simple heatsink with a fan (12v, 24W)
-- [ ] SingleSwitch: a current based uninsulated throw switch
-- [ ] SingleResistor: a basic capacitor
-- [ ] SingleCapacitor: a simple capacitor
-- [ ] SingleInductor: a simple inductor
-- [ ] Basic 12v Battery
+- [ ] Thermal Networks:
+    - [ ] CreativeHeater: a simple thermal cable heater
+    - [ ] Heatsink: a simple heatsink with no fan
+    - [ ] Heatsink with a fan: a simple heatsink with a fan (12v, 24W)
 
 - [ ] Shaft Networks:
     - [ ] generator
@@ -66,19 +76,32 @@ I say models and textures, but these are basic as almost all of these items will
     - [ ] clutch
     - [ ] static shaft
 
+- [ ] Electrical Networks (with Thermal System)
+    - [ ] SingleCable: a current based uninsulated cable that connects similarly to RF pipes
+    - [ ] SingleSource: a simple voltage source block
+    - [ ] SingleGround: a simple ground pin
+    - [ ] SingleSwitch: a current based uninsulated throw switch
+    - [ ] SingleResistor: a basic capacitor
+    - [ ] SingleCapacitor: a simple capacitor
+    - [ ] SingleInductor: a simple inductor
+    - [ ] Basic 12v Battery
+
 NOTE: Models are not a priority at this stage as most of the Single* items will be removed later.
 
-Log Server:
+## Phase 2.5: Sim Revisit
 
-- [ ] Centralized log collection server (might be postponed)
-- [ ] config file disclaimer option (disables the mod in un-obfuscated contexts, unless the user agrees to not pester the devs before 1.0)
-- [ ] crash logger code (catch Minecraft crashes?)
+Cameron wants to revisit the Electrical Simulator code after we finish Node.
+
+If you want a good read, you shoud find a book about non-linear dynamic circuit systems.
+
+Theoretically, this fixes our issues with InterSystem from the 1.7.10 version of Electrical Age.
 
 ## Phase 3: MultiNode
 
-- [ ] solar panels
-- [ ] wind turbines
-- [ ] autominer
+- [ ] Ghost Node implementation
+    - [ ] solar panels
+    - [ ] wind turbines
+    - [ ] autominer
 
 ## Phase 4: SixNode (Tiny Node if FMB?)
 
@@ -98,6 +121,9 @@ Log Server:
 - [ ] Initial rounds of bug fixing
 - [ ] Some reasonable textures
 - [ ] API v1.0 Stabilization (for mod compatibility)
+- [ ] Documentation subsystem using [Patchouli](https://www.curseforge.com/minecraft/mc-mods/patchouli)
+    - [ ] Write a converter to make this also presented on the website.
+- [ ] PDF "Datasheets" for components, akin to the ones in [Shenzhen I/O](https://usermanual.wiki/Document/SHENZHENIOManual.736522646/view)
 
 ## Phase 6: Machines and equipment
 

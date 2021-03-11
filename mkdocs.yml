@@ -8,3 +8,7 @@ nav:
   - Electrical Age Wiki: https://wiki.electrical-age.net
 theme: lumen
 repo_url: https://github.com/eln2/eln2-web
+
+markdown_extensions:
+  - admonition
+  - pymdownx.tasklist

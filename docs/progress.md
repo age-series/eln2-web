@@ -5,6 +5,17 @@ General progress information about Eln2 development can be found here.
 
 # 2021
 
+## Week 10 (Mar 7 - Mar 13)
+
+* `jrddunbr` and `Caeleron` worked on some new ideas for the electrical simulator code
+
+
+## Week 9 (Feb 28 - Mar 6)
+
+Bit of a mini hiatus.
+
+* `jrddunbr` and `Alan F.` committed some work on ore generation and registration.
+
 ## Week 8 (Feb 21 - Feb 27)
 
 * `jrddunbr` updated the website by moving the very low traffic #design-plans and #library channels from the Discord to the GitHub issue tracker/Kanban board, and library to [library](library.md).
