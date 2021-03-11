@@ -37,10 +37,13 @@
                                 <a href=".." class="nav-link">Home</a>
                             </li>
                             <li class="navitem">
-                                <a href="../development/" class="nav-link">Eln2 Developer Plans</a>
+                                <a href="../agenda/" class="nav-link">Eln2 Agenda</a>
                             </li>
                             <li class="navitem">
                                 <a href="../progress/" class="nav-link">Eln2 Progress</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../contributing/" class="nav-link">Contributing</a>
                             </li>
                             <li class="navitem active">
                                 <a href="./" class="nav-link">Library</a>
@@ -60,7 +63,7 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../progress/" class="nav-link">
+                                <a rel="prev" href="../contributing/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
@@ -104,6 +107,10 @@
               <ul class="nav flex-column">
               </ul>
             </li>
+            <li class="nav-item" data-level="2"><a href="#general-coding-resources" class="nav-link">General Coding Resources</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-level="2"><a href="#minecraft-coding" class="nav-link">Minecraft Coding</a>
               <ul class="nav flex-column">
               </ul>
@@ -116,51 +123,67 @@
                     <div class="col-md-9" role="main">
 
 <h1 id="library">library</h1>
-<p>Here, you can find various resources related to the mod that might be useful...</p>
+<p>Here, you can find various resources related to the mod that might be useful.</p>
+<p>Also, check out the Eln2 design <a href="https://drive.google.com/drive/folders/1rWXCEy9EQmKbeYGKnJssirRZnXX0fHkj">google drive</a>.</p>
 <h2 id="mnaspice-resources">MNA/SPICE Resources</h2>
 <ul>
-<li>https://lpsa.swarthmore.edu/Systems/Electrical/mna/MNA1.html<ul>
+<li><a href="https://lpsa.swarthmore.edu/Systems/Electrical/mna/MNA1.html">https://lpsa.swarthmore.edu/Systems/Electrical/mna/MNA1.html</a><ul>
 <li>Fantastic set of pages documenting how to do MNA. Sample Matlab code provided.</li>
 </ul>
 </li>
-<li>http://qucs.sourceforge.net/tech/node14.html<ul>
+<li><a href="http://qucs.sourceforge.net/tech/node14.html">http://qucs.sourceforge.net/tech/node14.html</a><ul>
 <li>Another step-by-step resource for MNA</li>
 </ul>
 </li>
-<li>https://en.wikipedia.org/wiki/Two-port_network<ul>
+<li><a href="https://en.wikipedia.org/wiki/Two-port_network">https://en.wikipedia.org/wiki/Two-port_network</a><ul>
 <li>Important concepts for working on "fixing" some issues with "InterSystem"</li>
 </ul>
 </li>
-<li>https://www.analog.com/en/design-center/simulation-models/spice-models.html<ul>
+<li><a href="https://www.analog.com/en/design-center/simulation-models/spice-models.html">https://www.analog.com/en/design-center/simulation-models/spice-models.html</a><ul>
 <li>Some sample SPICE circuits. Might want to add compatibility later.</li>
 </ul>
 </li>
 </ul>
 <h2 id="real-life-electrical-grid-data">Real life electrical grid data</h2>
 <ul>
-<li>https://www.swissgrid.ch/en/home.html<ul>
+<li><a href="https://www.swissgrid.ch/en/home.html">https://www.swissgrid.ch/en/home.html</a><ul>
 <li>A cool thing that shows the electric grid in Switzerland!</li>
 </ul>
 </li>
-<li>https://www.eirgridgroup.com/the-grid/<ul>
+<li><a href="https://www.eirgridgroup.com/the-grid/">https://www.eirgridgroup.com/the-grid/</a><ul>
 <li>Ireland electric grid. Map on the website updated Jan 2020.</li>
 </ul>
 </li>
-<li>http://smartgriddashboard.eirgrid.com/<ul>
+<li><a href="http://smartgriddashboard.eirgrid.com/">http://smartgriddashboard.eirgrid.com/</a><ul>
 <li>Ireland Smart Grid Dashboard</li>
 </ul>
 </li>
 </ul>
 <h2 id="signal-processing">Signal Processing</h2>
 <ul>
-<li>https://en.wikipedia.org/wiki/Kalman_filter<ul>
-<li>It looks like math.</li>
+<li><a href="https://en.wikipedia.org/wiki/Kalman_filter">Kalman filter</a></li>
+<li>Strong prediction of signal behavior based on trends</li>
+<li><a href="https://en.wikipedia.org/wiki/PID_controller">PID</a></li>
+<li>Commonly used for industrial machinery to react to operating conditions</li>
+<li><a href="https://en.wikipedia.org/wiki/Low-pass_filter">Low Pass Filter</a></li>
+<li>Jared's favorite tool for power generation plant regulators</li>
 </ul>
-</li>
+<h2 id="general-coding-resources">General Coding Resources</h2>
+<ul>
+<li><a href="https://www.jetbrains.com/idea/">Intellij IDEA Java/Kotlin IDE</a> </li>
+<li>We use this for all development on the project</li>
+<li><a href="https://chris.beams.io/posts/git-commit/">How to write good Git Commits (and more)</a></li>
+<li><a href="https://www.atlassian.com/blog/git/written-unwritten-guide-pull-requests">How to compose good Pull Requests that are likely to be accepted.</a></li>
+<li><a href="https://git-scm.com/book/en/v2">Pro Git Book</a> </li>
+<li>Anything you could want to know about Git itself, and how to use the CLI.</li>
+<li><a href="https://www.jetbrains.com/help/idea/create-tests.html">How to create unit tests</a></li>
+<li><a href="https://developers.google.com/protocol-buffers">Google Protocol Buffers</a></li>
+<li>Used in network communications, data serialization</li>
+<li><a href="https://developer.android.com/kotlin/style-guide">Kotlin Style Guide</a></li>
 </ul>
 <h2 id="minecraft-coding">Minecraft Coding</h2>
 <ul>
-<li>https://github.com/TheGreyGhost/MinecraftByExample<ul>
+<li><a href="https://github.com/TheGreyGhost/MinecraftByExample">https://github.com/TheGreyGhost/MinecraftByExample</a><ul>
 <li>Templates for different Minecraft primitives.</li>
 </ul>
 </li>

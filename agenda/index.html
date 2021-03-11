@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Eln2 Developer Plans - eln2.org</title>
+        <title>Eln2 Agenda - eln2.org</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/font-awesome.min.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
@@ -37,10 +37,13 @@
                                 <a href=".." class="nav-link">Home</a>
                             </li>
                             <li class="navitem active">
-                                <a href="./" class="nav-link">Eln2 Developer Plans</a>
+                                <a href="./" class="nav-link">Eln2 Agenda</a>
                             </li>
                             <li class="navitem">
                                 <a href="../progress/" class="nav-link">Eln2 Progress</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../contributing/" class="nav-link">Contributing</a>
                             </li>
                             <li class="navitem">
                                 <a href="../library/" class="nav-link">Library</a>
@@ -70,7 +73,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="https://github.com/eln2/eln2-web/edit/master/docs/development.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
+                                <a href="https://github.com/eln2/eln2-web/edit/master/docs/agenda.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
                             </li>
                     </ul>
                 </div>
@@ -90,20 +93,8 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#eln-2-development" class="nav-link">Eln 2 development</a>
+            <li class="nav-item" data-level="1"><a href="#eln-2-agenda" class="nav-link">Eln 2 agenda</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#licensing" class="nav-link">Licensing</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#languages" class="nav-link">Languages</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#project-structure" class="nav-link">Project Structure</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
             <li class="nav-item" data-level="2"><a href="#phases" class="nav-link">Phases</a>
               <ul class="nav flex-column">
               </ul>
@@ -143,45 +134,7 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="eln-2-development">Eln 2 development</h1>
-<p>Some tidbits about development.</p>
-<h2 id="licensing">Licensing</h2>
-<p>Eln2 is licensed under the MIT license.</p>
-<p>Models and artwork need to be under some creative commons license that allows modification and distribution <em>with</em> commercial use, <a href="https://creativecommons.org/licenses/by-sa/4.0/">such as this license</a>.</p>
-<h2 id="languages">Languages</h2>
-<h4 id="kotlin">Kotlin:</h4>
-<ul>
-<li>Eln2</li>
-<li>Apps</li>
-<li>Minecraft Integration</li>
-</ul>
-<h4 id="google-protobuffs">Google Protobuffs:</h4>
-<ul>
-<li>Network sockets </li>
-<li>Shared memory</li>
-</ul>
-<h4 id="rust">Rust:</h4>
-<ul>
-<li>Log collector</li>
-<li>Optimized Sim code? (later date)</li>
-</ul>
-<h4 id="c">C#:</h4>
-<ul>
-<li>Vintage Story</li>
-</ul>
-<h4 id="markdown">Markdown:</h4>
-<ul>
-<li>https://eln2.org, compiled with MkDocs</li>
-<li>Most documentation</li>
-</ul>
-<h2 id="project-structure">Project Structure</h2>
-<p>Inside the <code>eln2</code> repository, you will find multiple folders:</p>
-<ul>
-<li><code>core</code> - All of the core MNA, thermal, and shaft based simulation code. No Minecraft or VS code ends up here.</li>
-<li><code>apps</code> - Standalone Applications and daemons.</li>
-<li><code>integration-mc&lt;version&gt;</code> - Basically, a Minecraft mod</li>
-<li><code>proto</code> - protocol buffers for the network serialization code</li>
-</ul>
+<h1 id="eln-2-agenda">Eln 2 agenda</h1>
 <h2 id="phases">Phases</h2>
 <p>These are better expressed in the Kanban boards on GitHub.</p>
 <p>[ <a href="https://github.com/orgs/eln2/projects/1">General Development Board</a> ]</p>
@@ -265,7 +218,6 @@
 </ul>
 <h2 id="phase-5-alpha-release-and-debugging">Phase 5: Alpha Release and debugging</h2>
 <ul class="task-list">
-<li class="task-list-item"><input type="checkbox" disabled/> remove developer disclaimer config</li>
 <li class="task-list-item"><input type="checkbox" disabled/> Initial rounds of bug fixing</li>
 <li class="task-list-item"><input type="checkbox" disabled/> Some reasonable textures</li>
 <li class="task-list-item"><input type="checkbox" disabled/> API v1.0 Stabilization (for mod compatibility)</li>
@@ -274,6 +226,12 @@
 </ul>
 </li>
 <li class="task-list-item"><input type="checkbox" disabled/> PDF "Datasheets" for components, akin to the ones in <a href="https://usermanual.wiki/Document/SHENZHENIOManual.736522646/view">Shenzhen I/O</a></li>
+<li class="task-list-item"><input type="checkbox" disabled/> Mod translation code</li>
+</ul>
+<p>When done:</p>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> remove developer disclaimer config</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Release 2.0</li>
 </ul>
 <h2 id="phase-6-machines-and-equipment">Phase 6: Machines and equipment</h2>
 <p>In no particular order:</p>

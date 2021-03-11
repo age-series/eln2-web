@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Contributing - eln2.org</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/color-brewer.min.css">
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">eln2.org</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../agenda/" class="nav-link">Eln2 Agenda</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../progress/" class="nav-link">Eln2 Progress</a>
+                            </li>
+                            <li class="navitem active">
+                                <a href="./" class="nav-link">Contributing</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../library/" class="nav-link">Library</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="https://electrical-age.net" class="nav-link">Electrical Age Website</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="https://wiki.electrical-age.net" class="nav-link">Electrical Age Wiki</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../progress/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../library/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/eln2/eln2-web/edit/master/docs/contributing.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#contributing-to-eln2" class="nav-link">Contributing to Eln2</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#licensing" class="nav-link">Licensing</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#project-languages" class="nav-link">Project Languages</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#project-structure" class="nav-link">Project Structure</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#setting-up-the-code-development-environment" class="nav-link">Setting up the code development environment</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#add-build-configurations-and-run" class="nav-link">Add build configurations, and run</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#helpful-resources-for-contributing" class="nav-link">Helpful resources for contributing</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#pr-guidelines" class="nav-link">PR Guidelines</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#branch-naming" class="nav-link">Branch Naming</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#contributing-via-github" class="nav-link">Contributing via GitHub</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#other-contributing-options" class="nav-link">Other Contributing options</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="contributing-to-eln2">Contributing to Eln2</h1>
+<p>Feel free to introduce yourself on our <a href="https://discord.gg/YjK2JAD">Discord</a>!</p>
+<p>You can make pull requests or issues, but please note that we are currently focused on making the mod functional, before adding major content and reviewing game balance.</p>
+<h2 id="licensing">Licensing</h2>
+<p>Eln2 is licensed under the MIT license.</p>
+<p>Models and artwork are <a href="https://creativecommons.org/share-your-work/public-domain/cc0/">CC0</a> unless otherwise noted.</p>
+<h2 id="project-languages">Project Languages</h2>
+<h4 id="kotlin">Kotlin:</h4>
+<ul>
+<li>Core</li>
+<li>Apps</li>
+<li>Minecraft</li>
+</ul>
+<h4 id="google-protobuffs">Google Protobuffs:</h4>
+<ul>
+<li>Network sockets</li>
+<li>Shared memory</li>
+</ul>
+<h4 id="rust">Rust:</h4>
+<ul>
+<li>Log collector</li>
+<li>Optimized Sim code? (later date)</li>
+</ul>
+<h4 id="c">C#:</h4>
+<ul>
+<li>Vintage Story</li>
+</ul>
+<h4 id="markdown">Markdown:</h4>
+<ul>
+<li>https://eln2.org, compiled with MkDocs</li>
+<li>Most documentation</li>
+</ul>
+<h2 id="project-structure">Project Structure</h2>
+<ul>
+<li>apps: Standalone applications and daemons<ul>
+<li>Asm Computer UI</li>
+</ul>
+</li>
+<li>core: Core simulation code<ul>
+<li>compute: Various computer architectures for signal processing and other purposes</li>
+<li>debug: Debug helpers</li>
+<li>math: Math helpers</li>
+<li>parsers: Parsers and import/export tools</li>
+<li>sim: Electrical and Thermal simulators</li>
+<li>space: various data structures and algorithms</li>
+</ul>
+</li>
+<li>integration-mc1-16: Minecraft 1.16.5 Integration Code</li>
+<li>proto: A set of <a href="https://developers.google.com/protocol-buffers">Google Protocol Buffers</a> for communication with all of our applications (proto3)</li>
+</ul>
+<h2 id="setting-up-the-code-development-environment">Setting up the code development environment</h2>
+<p>In general, these instructions are roughly the same for Windows, Mac, and Linux.</p>
+<h3 id="tools-needed">Tools Needed</h3>
+<p>You need:
+* Intellij IDEA (Community Edition is sufficient) [<a href="https://www.jetbrains.com/idea/download/">link</a>]
+    * For a better experience, optionally install the Jetbrains Toolbox and then install IDEA [<a href="https://www.jetbrains.com/toolbox-app/">link</a>]
+* Git version control CLI:
+    * Windows: [<a href="https://git-scm.com/downloads">link</a>]
+    * Mac: <code>brew install git</code>
+    * .deb based: <code>apt install git</code>
+    * .rpm based: <code>yum install git</code> (<code>dnf install git</code> for Fedora)
+    * Arch Linux based: <code>pacman -Syu git</code>
+* Java 8 SDK. There are a few options:
+    * Oracle Java 8 SDK (paid) [<a href="https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html">link</a>]
+    * AdoptOpen JDK 8 (LTS) HotSpot SDK [<a href="https://adoptopenjdk.net/?variant=openjdk8&amp;jvmVariant=hotspot">link</a>]
+    * IBM SDK 8 [<a href="https://developer.ibm.com/javasdk/downloads/sdk8/">link</a>]
+    * Amazon Corretto 8 [<a href="https://docs.aws.amazon.com/corretto/latest/corretto-8-ug/what-is-corretto-8.html">link</a>]
+    * .deb based: <code>apt install openjdk-8-jdk</code>
+    * .rpm based: <code>yum instal java-1.8.0-openjdk</code> (<code>dnf install java-1.8.0-openjdk</code> for Fedora)
+    * Arch Linux based: <code>pacman -Syu jdk8-openjdk</code></p>
+<p>IDEA will also install Java 11 or so, but that will not work for Eln2 development last we checked.</p>
+<h3 id="clone-the-repository">Clone the repository</h3>
+<p>First, clone the repository down in whatever method works best for you. Winodws users will want to use Git Bash for these commands.</p>
+<p>For most people, use this command. It will create a folder with the repository data.</p>
+<p><code>git clone https://github.com/eln2/eln2.git</code></p>
+<p>If you have a GitHub account with SSH keys on it, use this instead:</p>
+<p><code>git clone git@github.com:eln2/eln2.git</code></p>
+<p>Once you have downloaded the repository, configure Git:</p>
+<pre><code class="language-sh">git config --global user.name Your Name (or GitHub alias)
+git config --global user.email Your Email
+</code></pre>
+<h3 id="start-and-configure-idea">Start and configure IDEA</h3>
+<p>IDEA is pretty simple.</p>
+<ol>
+<li>Start the application, then say "Open or Import".</li>
+<li>Find the <code>build.gradle.kts</code> file in the root of the repository, then click next.</li>
+<li>Select all defaults on following screens.</li>
+</ol>
+<h2 id="add-build-configurations-and-run">Add build configurations, and run</h2>
+<p>From the main IDEA window, you can configure different tasks to run with Gradle.</p>
+<ol>
+<li>In the upper right, click <code>Edit Configurations...</code></li>
+<li>Inside this menu, on the top left, click the <code>+</code> sign</li>
+<li>Select Gradle</li>
+<li>Ignoring the name field, click the folder icon with the blue square next to the text box for Gradle Project</li>
+<li>Depending on the task you want to run, select the correct project namespace (see below)</li>
+<li>Enter the task name (see below)</li>
+<li>Optionally, change the name for this build/run configuration</li>
+</ol>
+<p>Different build configurations:</p>
+<table>
+<thead>
+<tr>
+<th>Project Namespace</th>
+<th>Task Name</th>
+<th>Task purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>eln2:core</td>
+<td>test</td>
+<td>Tests the Eln2 Core</td>
+</tr>
+<tr>
+<td>eln2:core</td>
+<td>build</td>
+<td>Builds the Eln2 Core, running tests</td>
+</tr>
+<tr>
+<td>eln2:apps</td>
+<td>build</td>
+<td>Builds the Eln2 Applications (requires eln2:core automatically)</td>
+</tr>
+<tr>
+<td>eln2</td>
+<td>build</td>
+<td>Builds and runs tests for all of Eln2</td>
+</tr>
+<tr>
+<td>eln2</td>
+<td>bundle</td>
+<td>Builds and runs tests for all of Eln2</td>
+</tr>
+<tr>
+<td>eln2:integration-mc-1-16</td>
+<td>runClient</td>
+<td>Runs a minecraft client in a development environment (no username, cannot connect to servers)</td>
+</tr>
+<tr>
+<td>eln2:integration-mc-1-16</td>
+<td>runServer</td>
+<td>Runs a minecraft server in a development environment</td>
+</tr>
+<tr>
+<td>eln2:integration-mc-1-16</td>
+<td>publish</td>
+<td>Supposedly, builds a usable Minecraft mod. You will need to install Bookshelf, Forge, and some other tidbits...</td>
+</tr>
+</tbody>
+</table>
+<h2 id="helpful-resources-for-contributing">Helpful resources for contributing</h2>
+<p>Please see the <a href="../library/">library page</a> for helpful tips, documents, and inspiration.</p>
+<p>We also have a Google Drive with a bunch of planning documents <a href="https://drive.google.com/drive/folders/1rWXCEy9EQmKbeYGKnJssirRZnXX0fHkj">here</a>.</p>
+<h2 id="pr-guidelines">PR Guidelines</h2>
+<ul>
+<li>Please use concise subject messages on commits, and a commit message body explaining the changes is highly encouraged.</li>
+<li>Keep commits in a PR to one topic, if possible. This permits us to use version control to find software regressions more easily.</li>
+<li>Avoid mass operations such as folder moves and restructures next to logical changes in the code in the same commit. It makes the commit diffs messy and difficult to follow.</li>
+<li>Use the PR message on GitHub to describe changes; use markdown check marks to show intended progress towards a goal.</li>
+<li>Keep your PR up to date with the <code>dev</code> branch to ease merges. It is preferred that you rebase rather than merge where possible.</li>
+<li>PR's should come with their code documented and unit tested (as much as possible, as decided by the head developers).</li>
+<li>If you make a PR, you agree to the licenses of the project, and that the code and content you are contributing complies with the applicable license.</li>
+</ul>
+<h2 id="branch-naming">Branch Naming</h2>
+<p>Please use concise names that accurately describe what you are doing.
+For example, <code>feature/add-variable-resistor</code> may describe some new Variable Resistor you are adding.</p>
+<p>The following naming convention is to be used.</p>
+<ul>
+<li><code>dev</code> – Branch that all of the developers work out of.</li>
+<li><code>stable</code> - When applicable, stable releases of the code</li>
+<li><code>feature/(branch name)</code> – Branches created by developers that add new features</li>
+</ul>
+<p>Unit testing should be sufficient for watching for errors in the code. If a buf is found, push a fix and push a release.
+Releases will just be simple release tags/labels on the <code>dev</code> or <code>stable</code> branch.</p>
+<h2 id="contributing-via-github">Contributing via GitHub</h2>
+<p>This guide tries its best to make sure you don't need to know too much Git, but you may need help.</p>
+<ol>
+<li>Make the changes you want to make</li>
+<li><code>git checkout -b feature/&lt;your new feature&gt;</code></li>
+<li>Verify that you have changed what you want by running <code>git status</code></li>
+<li><code>git add .</code></li>
+<li><code>git commit</code></li>
+<li>Push the code to upstream<ul>
+<li>If you have Eln2 repository access<ol>
+<li><code>git push origin feature/&lt;your new feature&gt;</code> (as above)</li>
+</ol>
+</li>
+<li>If you do not have access:<ol>
+<li>Fork the repo on GitHub</li>
+<li>Push the code<ul>
+<li>If you used the repo links above to clone, do:<ol>
+<li><code>git remote add fork &lt;your repositories remote url&gt;</code> (for example, <code>https://github.com/&lt;github username&gt;/eln2.git</code>)</li>
+<li><code>git push fork feature/&lt;your new feature&gt;</code> (as above)</li>
+</ol>
+</li>
+<li>Otherwise, do:<ol>
+<li><code>git push origin feature/&lt;your new feature&gt;</code> (as above; "origin" is your fork in this case)</li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>Make a pull request. If you are confident that you are done with writing the code, and it meets contribution guidelines, then make it as a standard pull request. Otherwise, select the down arrow and then <code>Draft PR</code> and then click Create Pull Request.</li>
+<li>If you have further changes, start with step 3 and continue to step 6. It will update the PR with changes automatically.</li>
+<li>Wait for someone to accept or reject your PR. We get email notifications when PR's are created. We may make suggestions, in which you fix your code and come back to us with those changes.</li>
+<li>Once your code is merged, <code>git checkout dev</code> and then <code>git pull --ff-only</code>.</li>
+</ol>
+<h2 id="other-contributing-options">Other Contributing options</h2>
+<p>If you are not comfortable with your Git-fu, you send your repository state or proposed textures/models/sounds as a zip/7z/tar to <a href="mailto:jrddunbr@ja4.org">jrddunbr@ja4.org</a>.</p>
+<p>You can also send textures in the <a href="https://discord.gg/YjK2JAD">Electrical Age Discord</a>, but we ask that you please archive your contributions to prevent Discord from lossy compressing the assets.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
