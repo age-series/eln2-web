@@ -4,12 +4,12 @@
 
 These are better expressed in the Kanban boards on GitHub.
 
-[ [General Development Board](https://github.com/orgs/eln2/projects/1) ]
+[ [General Development Board](https://github.com/orgs/age-series/projects/1) ]
 
-[ [MNA](https://github.com/orgs/eln2/projects/6) ]
-[ [Sim](https://github.com/orgs/eln2/projects/5) ]
-[ [Blocks](https://github.com/orgs/eln2/projects/4) ]
-[ [Items](https://github.com/orgs/eln2/projects/3) ]
+[ [MNA](https://github.com/orgs/age-series/projects/6) ]
+[ [Sim](https://github.com/orgs/age-series/projects/5) ]
+[ [Blocks](https://github.com/orgs/age-series/projects/4) ]
+[ [Items](https://github.com/orgs/age-series/projects/3) ]
 
 ## Phase 1: MNA Code [DONE]
 
@@ -19,7 +19,7 @@ Core:
 
 ## Phase 2: SingleNode [IN PROGRESS]
 
-Kanban board: [Phase 2 Projects](https://github.com/orgs/eln2/projects/2)
+Kanban board: [Phase 2 Projects](https://github.com/orgs/age-series/projects/2)
 
 - [ ] config file disclaimer option (disables the mod in un-obfuscated contexts, unless the user agrees to not pester the devs before 1.0)
 
