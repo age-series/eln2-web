@@ -9,7 +9,7 @@ nav:
   - Electrical Age Wiki: https://wiki.electrical-age.net
   - Discord: https://discord.gg/YjK2JAD
 theme: lumen
-repo_url: https://github.com/eln2/eln2-web
+repo_url: https://github.com/age-series/eln2-web
 
 markdown_extensions:
   - admonition

@@ -78,11 +78,11 @@ First, clone the repository down in whatever method works best for you. Winodws 
 
 For most people, use this command. It will create a folder with the repository data.
 
-`git clone https://github.com/eln2/eln2.git`
+`git clone https://github.com/age-series/eln2.git`
 
 If you have a GitHub account with SSH keys on it, use this instead:
 
-`git clone git@github.com:eln2/eln2.git`
+`git clone git@github.com:age-series/eln2.git`
 
 Once you have downloaded the repository, configure Git:
 

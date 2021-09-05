@@ -110,7 +110,7 @@ A slight hiatus while `Caeleron` has exams, `jrddunbr` has interviews.
 
 ## Week 12 (Mar 15 - Mar 21)
 
-* `Baughn` said he has free time coming up, and so we brought him up to speed some on how Eln2 development is going and how to contribute. He suggested we convert to a monorepo, and so we have [prepared such a repository](https://github.com/eln2/eln2). We are still waiting to hear from Grissess and get a concensus on that decision before going with it.
+* `Baughn` said he has free time coming up, and so we brought him up to speed some on how Eln2 development is going and how to contribute. He suggested we convert to a monorepo, and so we have [prepared such a repository](https://github.com/age-series/eln2). We are still waiting to hear from Grissess and get a concensus on that decision before going with it.
 
 * `Grissess`, `Baughn`, and `jrddunbr` determined that the repository will be MIT licensed, and we will aim for CC0 or share-alike (commercial friendly). This will be fine, because UMC is LGPLv2.1, which allows us to have a different license so long as we keep our UMC on GitHub basically. There are two scripts in the Integration part of the mod code that are from IR-Integration, and so we may need those few files cleared as MIT to call the whole repo MIT, but we can also just use a license header in those applicable files.
 
